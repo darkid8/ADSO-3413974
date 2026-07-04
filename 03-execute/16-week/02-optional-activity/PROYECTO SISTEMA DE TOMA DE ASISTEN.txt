@@ -1,0 +1,378 @@
+PROYECTO: SISTEMA DE TOMA DE ASISTENCIA - (Casos de uso)
+
+Objetivo:
+
+Se busca optimizar el tiempo del registro de la asistencia de los aprendices, cambiando el proceso manual (búsqueda en SofiaPlus) por el software que logre realizar el registro de forma rápida, organizada y segura. El sistema debe permitir registrar la asistencia de los aprendices, facilitando el control, la consulta y la generación de reportes de asistencia.
+
+INSTRUMENTOS DE RECOLECCIÓN DE INFORMACIÓN:
+
+- Observación del proceso actual de toma de asistencia.
+- Revisión de los formatos de asistencia utilizados.
+
+REQUERIMIENTOS FUNCIONALES
+
+RF-01: El sistema muestra la lista de aprendices.
+
+RF-02: El sistema debe permitir registrar la asistencia de todos los aprendices en una sola pantalla.
+
+RF-03: El sistema debe permitir marcar el estado de asistencia de cada aprendiz como Asistió, Tarde o Ausente.
+
+RF-04: El sistema debe guardar automáticamente el registro de asistencia con la fecha y la ficha correspondiente.
+
+RF-05: El sistema debe permitir consultar los registros de asistencia por fecha y ficha.
+
+RF-06: El sistema debe permitir modificar un registro de asistencia cuando sea necesario.
+
+RF-07: El sistema debe generar reportes de asistencia por aprendiz, ficha o rango de fechas.
+
+RF-08: El sistema debe permitir buscar rápidamente un aprendiz dentro de la ficha seleccionada.
+
+Actor principal:
+Instructor (Administrador).
+
+Alcance:
+
+El sistema permitirá al instructor seleccionar una ficha, visualizar el listado de aprendices, registrar la asistencia, consultar y modificar los registros cuando sea necesario, buscar aprendices y generar reportes de asistencia, optimizando el proceso de control y reduciendo el uso de formatos manuales.
+ 
+Diagrama de clases:
+---
++----------------------+
+|      Instructor      |
++----------------------+
+| idInstructor         |
+| nombre               |
+| correo               |
+| contraseña           |
++----------------------+
+| iniciarSesion()      |
+| tomarAsistencia()    |
+| consultarHistorial() |
++----------------------+
+          |
+          | 1
+          |
+          | *
++----------------------+
+|        Ficha         |
++----------------------+
+| numeroFicha          |
+| programa             |
+| jornada              |
++----------------------+
+| obtenerAprendices()  |
++----------------------+
+          |
+          |1
+          |
+          |*
++----------------------+
+|      Aprendiz        |
++----------------------+
+| idAprendiz           |
+| nombre               |
+| documento            |
+| correo               |
++----------------------+
+| consultarAsistencia()|
++----------------------+
+          |
+          |1
+          |
+          |*
++----------------------+
+|      Asistencia      |
++----------------------+
+| idAsistencia         |
+| fecha                |
+| hora                 |
+| estado               |
++----------------------+
+| registrar()          |
+| guardar()            |
+| generarReporte()     |
++----------------------+
+
+Relaciones:
+
+Un Instructor puede tener varias Fichas.
+Una Ficha tiene muchos Aprendices.
+Un Aprendiz posee muchos registros de Asistencia.
+
+CU-01. Iniciar sesión
+
+Objetivo
+
+Permitir que el instructor acceda al sistema.
+
+Actor
+
+Instructor
+
+Precondiciones
+
+El instructor debe estar registrado.
+Debe tener un correo y contraseña válidos.
+
+Flujo principal
+
+El instructor ingresa al sistema.
+Introduce correo y contraseña.
+El sistema valida las credenciales.
+El sistema permite el acceso al panel principal.
+
+Flujo alternativo
+
+Si las credenciales son incorrectas, el sistema muestra un mensaje de error.
+
+Postcondiciones
+
+El instructor inicia sesión correctamente.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CU-02. Seleccionar ficha
+
+Objetivo
+
+Permitir seleccionar una ficha para visualizar sus aprendices.
+
+Actor
+
+Instructor
+
+Precondiciones
+El instructor inició sesión.
+
+Flujo principal
+
+El instructor selecciona una ficha.
+El sistema carga la información de la ficha.
+El sistema muestra la lista de aprendices.
+
+Postcondiciones
+
+La ficha queda seleccionada.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CU-03. Registrar asistencia
+
+Objetivo
+
+Registrar la asistencia de todos los aprendices.
+
+Actor
+
+Instructor
+
+Precondiciones
+
+Existe una ficha seleccionada.
+Los aprendices están registrados.
+
+Flujo principal
+El sistema muestra el listado de aprendices.
+El instructor marca para cada aprendiz:
+Asistió
+Tarde
+Ausente
+El sistema guarda automáticamente cada registro.
+El sistema registra fecha, hora y ficha.
+
+Flujo alternativo
+
+Si ocurre un error al guardar, el sistema informa el problema.
+Postcondiciones
+La asistencia queda registrada.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CU-04. Buscar aprendiz
+
+Objetivo
+
+Encontrar rápidamente un aprendiz dentro de la ficha.
+
+Actor
+
+Instructor
+
+Precondiciones
+
+Existe una ficha abierta.
+
+Flujo principal
+
+El instructor escribe el nombre o documento.
+El sistema filtra la lista.
+Se muestran únicamente los aprendices encontrados.
+
+Postcondiciones
+
+El aprendiz es localizado.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CU-05. Consultar asistencia
+
+Objetivo
+
+Consultar registros de asistencia.
+
+Actor
+
+Instructor
+
+Precondiciones
+
+Existen registros almacenados.
+
+Flujo principal
+
+El instructor selecciona:
+Fecha
+Ficha
+El sistema realiza la búsqueda.
+Muestra los registros encontrados.
+
+Flujo alternativo
+
+Si no existen registros, el sistema informa que no hay resultados.
+Postcondiciones
+Se visualiza el historial solicitado.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CU-06. Modificar asistencia
+
+Objetivo
+
+Actualizar un registro de asistencia.
+
+Actor
+
+Instructor
+
+Precondiciones
+
+El registro existe.
+
+Flujo principal
+
+El instructor consulta una asistencia.
+Selecciona el registro.
+Cambia el estado.
+Guarda los cambios.
+El sistema actualiza la información.
+
+Postcondiciones
+
+El registro queda actualizado.
+
+CU-07. Generar reporte
+
+Objetivo
+
+Generar reportes de asistencia.
+
+Actor
+
+Instructor
+
+Precondiciones
+
+Existen registros.
+
+Flujo principal
+
+El instructor selecciona el tipo de reporte:
+Por aprendiz
+Por ficha
+Por rango de fechas
+El sistema genera el reporte.
+El sistema muestra el resultado.
+El instructor puede descargar o imprimir el reporte.
+
+Postcondiciones
+
+El reporte queda generado.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CU-08. Cerrar sesión
+
+Objetivo
+
+Finalizar la sesión del instructor.
+
+Actor
+
+Instructor
+
+Precondiciones
+
+El instructor inició sesión.
+Flujo principal
+El instructor selecciona "Cerrar sesión".
+El sistema finaliza la sesión.
+Regresa a la pantalla de inicio.
+
+Postcondiciones
+
+La sesión queda cerrada.
+
+
+
+Diagrama:
+
+                   +------------------------------------------------------+
+                   |          SISTEMA DE TOMA DE ASISTENCIA               |
+                   +------------------------------------------------------+
+
+                              +------------------+
+                              |   Instructor     |
+                              +------------------+
+                                       |
+        ------------------------------------------------------------------
+        |           |            |             |           |        |      |
+        |           |            |             |           |        |      |
+        V           V            V             V           V        V      V
+
+ +----------------+  +----------------+  +------------------------+
+ | Iniciar sesión |  | Seleccionar    |  | Visualizar lista de    |
+ +----------------+  | ficha          |  | aprendices             |
+                     +----------------+  +------------------------+
+                              |                    |
+                              |                    |
+                              +---------+----------+
+                                        |
+                                        V
+                           +-------------------------+
+                           | Registrar asistencia   |
+                           +-------------------------+
+                           | - Asistió              |
+                           | - Tarde                |
+                           | - Ausente              |
+                           +-------------------------+
+                                        |
+                                        V
+                           +-------------------------+
+                           | Guardar automáticamente |
+                           | fecha, hora y ficha     |
+                           +-------------------------+
+
+        |
+        |---------------------------------------------------------------|
+        |                 |                     |                        |
+        V                 V                     V                        V
+
+ +----------------+ +-------------------+ +-------------------+ +----------------+
+ | Buscar         | | Consultar         | | Modificar         | | Generar        |
+ | aprendiz       | | asistencia        | | asistencia        | | reportes       |
+ +----------------+ +-------------------+ +-------------------+ +----------------+
+                                                           |
+                                                           |
+                                                           V
+                                                 +------------------+
+                                                 | Cerrar sesión    |
+                                                 +------------------+
