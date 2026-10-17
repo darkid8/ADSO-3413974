@@ -3,7 +3,7 @@
 **Programa:** Análisis y Desarrollo de Software (ADSO - Ficha 3413974)  
 **Semana:** 25  
 **Fecha:** 17 de Octubre de 2026  
-**Fase:** 03 - Ejecución (`03-execute/25-week/01-session/01-activity`)  
+**Fase:** 03 - Ejecución (`03-execute/25-week/02-optional-activity`)  
 **Materia/Área:** Evaluación de Arquitectura, Lógica de Negocio y Reglas Críticas en Sistemas Transaccionales  
 **Fuente de Estudio:** `orderflow-engine-docs-main`
 
