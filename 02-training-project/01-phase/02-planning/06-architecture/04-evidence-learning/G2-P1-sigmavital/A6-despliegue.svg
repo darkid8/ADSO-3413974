@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="560" viewBox="0 0 1260 560" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+    </marker>
+    <marker id="openArrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11" fill="none" stroke="#334155" stroke-width="1.5" />
+    </marker>
+    <marker id="inherit" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 1 1 L 13 7 L 1 13 z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5" />
+    </marker>
+    <marker id="comp" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#1e293b" stroke="#1e293b" stroke-width="1" />
+    </marker>
+    <marker id="aggr" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#ffffff" stroke="#1e293b" stroke-width="1.4" />
+    </marker>
+  </defs>
+  <rect width="1260" height="560" fill="#f8fafc" />
+  <rect x="12" y="12" width="1236" height="536" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="630" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">SIGMAVITAL (SGA) — A6 Vista de Despliegue (Nodos y Protocolos)</text>
+  <polygon points="40,150 52,140 287,140 275,150" fill="#e2e8f0" stroke="#1d4ed8" stroke-width="1.5" />
+  <polygon points="275,150 287,140 287,285 275,295" fill="#cbd5e1" stroke="#1d4ed8" stroke-width="1.5" />
+  <rect x="40" y="150" width="235" height="145" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.8" />
+  <text x="157.5" y="172" text-anchor="middle" font-size="10" font-weight="600" font-style="italic" fill="#0f172a">«nodo cliente»</text>
+  <text x="157.5" y="188" text-anchor="middle" font-size="12" font-weight="700" font-style="normal" fill="#0f172a">Navegador Desktop / Tableta APH</text>
+  <line x1="40" y1="196" x2="275" y2="196" stroke="#1d4ed8" stroke-width="1" />
+  <text x="52" y="218" font-size="11" fill="#1e293b">Artefacto: SPA React SIGMAVITAL</text>
+  <text x="52" y="236" font-size="11" fill="#1e293b">(Bundle HTML/JS/CSS)</text>
+  <polygon points="345,150 357,140 592,140 580,150" fill="#e2e8f0" stroke="#047857" stroke-width="1.5" />
+  <polygon points="580,150 592,140 592,285 580,295" fill="#cbd5e1" stroke="#047857" stroke-width="1.5" />
+  <rect x="345" y="150" width="235" height="145" fill="#ecfdf5" stroke="#047857" stroke-width="1.8" />
+  <text x="462.5" y="172" text-anchor="middle" font-size="10" font-weight="600" font-style="italic" fill="#0f172a">«nodo proxy»</text>
+  <text x="462.5" y="188" text-anchor="middle" font-size="12" font-weight="700" font-style="normal" fill="#0f172a">Contenedor Nginx TLS</text>
+  <line x1="345" y1="196" x2="580" y2="196" stroke="#047857" stroke-width="1" />
+  <text x="357" y="218" font-size="11" fill="#1e293b">Artefacto: Proxy Inverso</text>
+  <text x="357" y="236" font-size="11" fill="#1e293b">nginx.conf + Certificado TLS 1.3</text>
+  <polygon points="650,140 662,130 912,130 900,140" fill="#e2e8f0" stroke="#b45309" stroke-width="1.5" />
+  <polygon points="900,140 912,130 912,295 900,305" fill="#cbd5e1" stroke="#b45309" stroke-width="1.5" />
+  <rect x="650" y="140" width="250" height="165" fill="#fef3c7" stroke="#b45309" stroke-width="1.8" />
+  <text x="775" y="162" text-anchor="middle" font-size="10" font-weight="600" font-style="italic" fill="#0f172a">«nodo aplicación»</text>
+  <text x="775" y="178" text-anchor="middle" font-size="12" font-weight="700" font-style="normal" fill="#0f172a">Contenedor Node.js 20</text>
+  <line x1="650" y1="186" x2="900" y2="186" stroke="#b45309" stroke-width="1" />
+  <text x="662" y="208" font-size="11" fill="#1e293b">Artefactos:</text>
+  <text x="662" y="226" font-size="11" fill="#1e293b">- API REST Express (RBAC/JWT)</text>
+  <text x="662" y="244" font-size="11" fill="#1e293b">- Motor Despacho + Socket.IO</text>
+  <polygon points="970,145 982,135 1227,135 1215,145" fill="#e2e8f0" stroke="#6d28d9" stroke-width="1.5" />
+  <polygon points="1215,145 1227,135 1227,290 1215,300" fill="#cbd5e1" stroke="#6d28d9" stroke-width="1.5" />
+  <rect x="970" y="145" width="245" height="155" fill="#f5f3ff" stroke="#6d28d9" stroke-width="1.8" />
+  <text x="1092.5" y="167" text-anchor="middle" font-size="10" font-weight="600" font-style="italic" fill="#0f172a">«nodo datos»</text>
+  <text x="1092.5" y="183" text-anchor="middle" font-size="12" font-weight="700" font-style="normal" fill="#0f172a">Contenedor PostgreSQL 16</text>
+  <line x1="970" y1="191" x2="1215" y2="191" stroke="#6d28d9" stroke-width="1" />
+  <text x="982" y="213" font-size="11" fill="#1e293b">Artefactos:</text>
+  <text x="982" y="231" font-size="11" fill="#1e293b">- BD sigmavital (12 tablas 3FN)</text>
+  <text x="982" y="249" font-size="11" fill="#1e293b">- Script pg_dump diario</text>
+  <polygon points="970,375 982,365 1227,365 1215,375" fill="#e2e8f0" stroke="#334155" stroke-width="1.5" />
+  <polygon points="1215,375 1227,365 1227,475 1215,485" fill="#cbd5e1" stroke="#334155" stroke-width="1.5" />
+  <rect x="970" y="375" width="245" height="110" fill="#f1f5f9" stroke="#334155" stroke-width="1.8" />
+  <text x="1092.5" y="397" text-anchor="middle" font-size="10" font-weight="600" font-style="italic" fill="#0f172a">«nodo respaldo externo»</text>
+  <text x="1092.5" y="413" text-anchor="middle" font-size="12" font-weight="700" font-style="normal" fill="#0f172a">Almacenamiento Cifrado Offsite</text>
+  <line x1="970" y1="421" x2="1215" y2="421" stroke="#334155" stroke-width="1" />
+  <text x="982" y="443" font-size="11" fill="#1e293b">Artefacto: Copias diarias</text>
+  <text x="982" y="461" font-size="11" fill="#1e293b">Retención 30 días (RPO≤24h)</text>
+  <line x1="287" y1="222" x2="345" y2="222" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="316" y="204" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">HTTPS :443</text>
+  <text x="316" y="216" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">WSS :443</text>
+  <line x1="592" y1="222" x2="650" y2="222" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="621" y="204" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">HTTP :3000</text>
+  <text x="621" y="216" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">WS interno</text>
+  <line x1="912" y1="222" x2="970" y2="222" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="941" y="204" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">TCP :5432</text>
+  <text x="941" y="216" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">red privada</text>
+  <line x1="1092" y1="300" x2="1092" y2="365" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="1150" y="332.5" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">SFTP :22 cifrado</text>
+  <rect x="40" y="508" width="1180" height="32" rx="6" fill="#f1f5f9" stroke="#cbd5e1" />
+  <text x="630" y="528" text-anchor="middle" font-size="11" fill="#334155">4 nodos + almacenamiento de respaldo · Protocolos/puertos declarados · Base de datos aislada en red privada (RNF-002 / RNF-013 / RNF-029).</text>
+
+</svg>

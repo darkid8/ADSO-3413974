@@ -1,22 +1,22 @@
-# A2 y A3 · Diagrama de Clases OO y Patrones de Diseño GoF — SIGMAVITAL (SGA)
+# A2 y A3 · Diagrama de Clases OO y Patrones de Diseño GoF (v2 · Alta Cohesión) — SIGMAVITAL (SGA)
 
 **Autor:** `@darkid8`  
+**Versión:** 2.0 (Día 2 — 2026-11-27 · Corrección de cohesión `B7`: extracción de `+exportarReportePDF()` desde `ServicioEmergencia` hacia `GeneradorReporteOperativo`)  
 **Diagramas:** [A2-A3-diagrama-clases-y-patrones.drawio](./A2-A3-diagrama-clases-y-patrones.drawio) · [A2-diagrama-clases.svg](./A2-diagrama-clases.svg)
 
 ---
 
 ## 1. Diseño Orientado a Objetos (`A2`)
 
-El diagrama contiene **16 clases e interfaces** con visibilidad (`+`, `-`, `#`), atributos tipados, métodos con parámetros/retorno y multiplicidades completas:
+El diagrama contiene **17 clases e interfaces** con visibilidad (`+`, `-`, `#`), atributos tipados, métodos con parámetros/retorno, multiplicidades completas y **alta cohesión estricta** (`Rubricas_G2.md` §1.2.5: ninguna clase mezcla lógica de negocio con UI, persistencia, notificaciones o reportes):
 
 - **Herencia (`«is-a»`):** `Paramedico` y `Conductor` heredan de la clase abstracta `PersonalOperativo`, compartiendo `#idPersonal`, `#nombreCompleto`, `#disponible` y `+estaHabilitado(): boolean`.
 - **Composición (`◆`):** `Ambulancia` `1 ◆── 1..*` `DocumentoHabilitacion` — los documentos de habilitación (SOAT, técnico-mecánica, REPS) no tienen ciclo de vida independiente fuera de la ambulancia.
 - **Agregación (`◇`):** `ServicioEmergencia` `0..* ◇── 1` `Ambulancia` — la ambulancia existe con independencia de los servicios puntuales que atiende.
+- **Separación de responsabilidades (Cohesión):** `ServicioEmergencia` gestiona exclusivamente el ciclo de estados y cierre clínico (`RN-005`), mientras `GeneradorReporteOperativo` asume la generación de documentos PDF a partir de la entidad del servicio.
 - **Polimorfismo por interfaces:**
   - `ICriterioAsignacion` implementada por `AsignacionCriticaTAM` y `AsignacionEstandarTAB`.
   - `ISuscriptorEventoOperativo` implementada por `MonitorTableroTiempoReal` y `RegistradorAuditoriaInmutable`.
-
-*(Nota de revisión Día 1: en esta versión v1 la clase `ServicioEmergencia` incluye `+exportarReportePDF(): Buffer`, cuya cohesión será evaluada en la lista de chequeo `B7` del Día 2.)*
 
 ---
 
@@ -31,7 +31,7 @@ Se aplican **2 patrones de diseño GoF distintos de Singleton**, reflejados dire
 
 ---
 
-## 3. Trazabilidad resumida Clases ↔ RF (v1)
+## 3. Trazabilidad Clases ↔ RF (100 % cubierto, 0 clases huérfanas)
 
 | Clase / Interfaz | Requisitos atendidos |
 |---|---|
@@ -39,6 +39,6 @@ Se aplican **2 patrones de diseño GoF distintos de Singleton**, reflejados dire
 | `PersonalOperativo`, `Paramedico`, `Conductor` | `RF-014`, `RF-016` |
 | `Ambulancia`, `DocumentoHabilitacion` | `RF-008`, `RF-011` |
 | `SolicitudEmergencia` | `RF-018`, `RF-021` |
-| `ServicioEmergencia` | `RF-023`, `RF-024` |
+| `ServicioEmergencia`, `GeneradorReporteOperativo` | `RF-023`, `RF-024` |
 | `ServicioDespacho`, `ICriterioAsignacion`, `AsignacionCriticaTAM`, `AsignacionEstandarTAB` | `RF-022`, `RF-023` |
 | `ISuscriptorEventoOperativo`, `MonitorTableroTiempoReal`, `RegistradorAuditoriaInmutable` | `RF-028`, `RF-055` |

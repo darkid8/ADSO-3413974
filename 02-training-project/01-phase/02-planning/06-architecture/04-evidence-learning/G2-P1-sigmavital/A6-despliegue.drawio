@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-27T08:05:00.000Z" agent="SIGMAVITAL-Generator" version="24.0.0" type="device">
+  <diagram id="Vista-de-Despliegue-SIGMAVITAL" name="Vista de Despliegue SIGMAVITAL">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1260" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n_cli" value="&lt;b&gt;«nodo cliente»
+Navegador Desktop / Tableta APH&lt;/b&gt;&lt;hr&gt;Artefacto: SPA React SIGMAVITAL&lt;br&gt;(Bundle HTML/JS/CSS)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=14;fillColor=#eff6ff;strokeColor=#1d4ed8;fontSize=11;" vertex="1" parent="1"><mxGeometry x="40" y="150" width="235" height="145" as="geometry"/></mxCell>
+        <mxCell id="n_ngx" value="&lt;b&gt;«nodo proxy»
+Contenedor Nginx TLS&lt;/b&gt;&lt;hr&gt;Artefacto: Proxy Inverso&lt;br&gt;nginx.conf + Certificado TLS 1.3" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=14;fillColor=#ecfdf5;strokeColor=#047857;fontSize=11;" vertex="1" parent="1"><mxGeometry x="345" y="150" width="235" height="145" as="geometry"/></mxCell>
+        <mxCell id="n_app" value="&lt;b&gt;«nodo aplicación»
+Contenedor Node.js 20&lt;/b&gt;&lt;hr&gt;Artefactos:&lt;br&gt;- API REST Express (RBAC/JWT)&lt;br&gt;- Motor Despacho + Socket.IO" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=14;fillColor=#fef3c7;strokeColor=#b45309;fontSize=11;" vertex="1" parent="1"><mxGeometry x="650" y="140" width="250" height="165" as="geometry"/></mxCell>
+        <mxCell id="n_db" value="&lt;b&gt;«nodo datos»
+Contenedor PostgreSQL 16&lt;/b&gt;&lt;hr&gt;Artefactos:&lt;br&gt;- BD sigmavital (12 tablas 3FN)&lt;br&gt;- Script pg_dump diario" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=14;fillColor=#f5f3ff;strokeColor=#6d28d9;fontSize=11;" vertex="1" parent="1"><mxGeometry x="970" y="145" width="245" height="155" as="geometry"/></mxCell>
+        <mxCell id="n_bkp" value="&lt;b&gt;«nodo respaldo externo»
+Almacenamiento Cifrado Offsite&lt;/b&gt;&lt;hr&gt;Artefacto: Copias diarias&lt;br&gt;Retención 30 días (RPO≤24h)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=14;fillColor=#f1f5f9;strokeColor=#334155;fontSize=11;" vertex="1" parent="1"><mxGeometry x="970" y="375" width="245" height="110" as="geometry"/></mxCell>
+        <mxCell id="dl_1" value="HTTPS :443
+WSS :443" style="endArrow=classic;html=1;strokeColor=#1e293b;fontSize=10;fontStyle=1;" edge="1" parent="1" source="n_cli" target="n_ngx"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dl_2" value="HTTP :3000
+WS interno" style="endArrow=classic;html=1;strokeColor=#1e293b;fontSize=10;fontStyle=1;" edge="1" parent="1" source="n_ngx" target="n_app"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dl_3" value="TCP :5432
+red privada" style="endArrow=classic;html=1;strokeColor=#1e293b;fontSize=10;fontStyle=1;" edge="1" parent="1" source="n_app" target="n_db"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="dl_4" value="SFTP :22 cifrado" style="endArrow=classic;html=1;strokeColor=#1e293b;fontSize=10;fontStyle=1;" edge="1" parent="1" source="n_db" target="n_bkp"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
