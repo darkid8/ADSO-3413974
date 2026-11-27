@@ -1,4 +1,4 @@
-# README de entrega · Guía 2: Diseño de la solución (Avance Día 1)
+# README de entrega · Guía 2: Diseño de la solución
 
 ## 1. Datos de la entrega
 
@@ -24,55 +24,55 @@
 
 | Artefacto | Archivo en esta carpeta | Origen (ruta en mi fork o «nuevo») | Qué ajusté o agregué |
 |---|---|---|---|
-| A1. Ficha de interpretación y plataforma | `A1-ficha-interpretacion-y-plataforma.md` | `02-training-project/01-phase/01-analysis/02-requirements/04-evidence-learning/SRS_SIGMAVITAL_SGA.md` | Seleccioné el subconjunto individual de 14 RF y 5 RNF, eliminé ambigüedades de stack (fijando TypeScript + PostgreSQL) y justifiqué la plataforma con 4 condiciones del caso. |
-| A2 y A3. Diagrama de clases y patrones GoF | `A2-A3-diagrama-clases-y-patrones.drawio`, `A2-diagrama-clases.svg`, `A2-A3-clases-y-patrones.md` | Nuevo (referencia conceptual de `SRS_SIGMAVITAL_SGA.md` y práctica `03-execute/15-week/02-optional-activity/`) | Diseñé 16 clases/interfaces tipadas con herencia, composición, agregación, polimorfismo y apliqué los patrones GoF **Strategy** y **Observer**. |
+| A1. Ficha de interpretación y plataforma | `A1-ficha-interpretacion-y-plataforma.md` | `02-training-project/01-phase/01-analysis/02-requirements/04-evidence-learning/SRS_SIGMAVITAL_SGA.md` | Seleccioné 14 RF y 5 RNF, unifiqué disponibilidad (`97 %`) y stack (TypeScript + PostgreSQL) justificado con 4 condiciones del caso. |
+| A2 y A3. Diagrama de clases y patrones GoF | `A2-A3-diagrama-clases-y-patrones.drawio`, `A2-diagrama-clases.svg`, `A2-A3-clases-y-patrones.md` | Nuevo (referencia conceptual de `SRS_SIGMAVITAL_SGA.md` y práctica `03-execute/15-week/02-optional-activity/`) | Diseñé 17 clases/interfaces con herencia, composición, agregación, polimorfismo (**Strategy** y **Observer**) y mejoré cohesión en Día 2 extrayendo `GeneradorReporteOperativo`. |
 | A4. Arquitectura y tabla de RNF | `A4-arquitectura.drawio`, `A4-arquitectura.svg`, `A4-arquitectura-decisiones.md` | Nuevo (estructura modular de `SRS_SIGMAVITAL_SGA.md` §2.1) | Formalicé 4 capas estrictas sin saltos de capa, canal WSS y tabla de decisiones para 5 RNF con alternativas descartadas. |
-| A5. Vista de componentes | *(En elaboración Día 2)* | Nuevo | Se entregará mañana `2026-11-27`. |
-| A6. Vista de despliegue | *(En elaboración Día 2)* | Nuevo | Se entregará mañana `2026-11-27`. |
-| A7. Matriz de trazabilidad | *(En elaboración Día 2)* | Nuevo | Se entregará mañana `2026-11-27`. |
+| A5. Vista de componentes | `A5-componentes.drawio`, `A5-componentes.svg`, `A5-vista-componentes.md` | Nuevo | Modelé 6 componentes con interfaces provistas/requeridas, dirección de dependencia y clases agrupadas. |
+| A6. Vista de despliegue | `A6-despliegue.drawio`, `A6-despliegue.svg`, `A6-vista-despliegue.md` | Nuevo | Definí 4 nodos + almacenamiento de respaldo con protocolos/puertos (`HTTPS:443`, `WSS:443`, `HTTP:3000`, `TCP:5432`, `SFTP:22`) ligados a RNF. |
+| A7. Matriz de trazabilidad | `A7-matriz-trazabilidad.md` | Nuevo | Tracé bidireccionalmente 14/14 RF y 5/5 RNF con 0 clases y 0 tablas huérfanas. |
 
 **Qué reutilicé (resumen en 3 a 5 líneas):**
 Reutilicé la especificación SRS de SIGMAVITAL consolidada en el fork (`SRS_SIGMAVITAL_SGA.md`), específicamente el núcleo operativo prehospitalario (autenticación, ambulancias TAB/TAM, personal, pacientes, emergencias, monitoreo y auditoría) junto con sus restricciones y requisitos no funcionales.
 
 **Qué ajusté para llevarlo al estándar de la rúbrica (resumen en 3 a 5 líneas):**
-Acoté el alcance individual a 14 RF críticos, eliminé la mezcla de tecnologías que existía en el SRS original (Django/Vue/MySQL) fijando TypeScript + Node.js/Express + React + PostgreSQL, y unifiqué la disponibilidad operativa al 97 %.
+Acoté el alcance individual a 14 RF críticos, eliminé la mezcla de tecnologías que existía en el SRS original fijando TypeScript + Node.js/Express + React + PostgreSQL, unifiqué la disponibilidad operativa al 97 % y corregí la cohesión de `ServicioEmergencia` extrayendo el generador de reportes PDF.
 
 **Qué hice completamente nuevo (resumen en 3 a 5 líneas):**
-Construí desde cero el diseño orientado a objetos tipado con 16 clases/interfaces, la aplicación explícita de los patrones Strategy y Observer sobre `ServicioDespacho` y la arquitectura formal en 4 capas con alternativas descartadas frente a los RNF.
+Construí desde cero el diseño orientado a objetos tipado (17 clases/interfaces), los patrones Strategy y Observer sobre `ServicioDespacho`, la arquitectura en 4 capas con alternativas descartadas, la vista de 6 componentes, la vista de despliegue de 4 nodos + respaldo y la matriz bidireccional al 100 %.
 
 ## 4. Autoverificación de mínimos
 
 **Si es P1:**
 - [x] A1 Ficha de interpretación: ≥ 8 RF (14 RF) y ≥ 3 RNF (5 RNF) con ID; plataforma justificada
-- [x] A2 Diagrama de clases: ≥ 8 clases (16 clases/interfaces), tipos, métodos, multiplicidades, ≥ 1 composición/agregación y ≥ 1 herencia o interfaz (con ≥ 2 implementaciones)
+- [x] A2 Diagrama de clases: ≥ 8 clases (17 clases/interfaces), tipos, métodos, multiplicidades, ≥ 1 composición/agregación y ≥ 1 herencia o interfaz (con ≥ 2 implementaciones)
 - [x] A3 ≥ 2 patrones GoF distintos aplicados en el diagrama (Strategy y Observer)
 - [x] A4 Arquitectura con diagrama y tabla de ≥ 3 RNF → decisión
-- [ ] A5 Vista de componentes *(en elaboración Día 2 — 2026-11-27)*
-- [ ] A6 Vista de despliegue *(en elaboración Día 2 — 2026-11-27)*
-- [ ] A7 Matriz de trazabilidad análisis → diseño *(en elaboración Día 2 — 2026-11-27)*
-- [x] Fuente editable (`.drawio`) e imagen exportada (`.svg`) de cada diagrama del Día 1
+- [x] A5 Vista de componentes: ≥ 5 componentes (6 componentes) con interfaces
+- [x] A6 Vista de despliegue: ≥ 3 nodos (4 nodos + respaldo) con artefactos y protocolos
+- [x] A7 Matriz de trazabilidad análisis → diseño (100 % bidireccional)
+- [x] Fuente editable (`.drawio`) e imagen exportada (`.svg`) de cada diagrama
 
 ## 5. Historial de commits
 
 | Día | Qué avancé (mensaje del commit) |
 |---|---|
-| `2026-11-26` (Día 1) | `feat(g2-p1): definir plataforma A1, diagrama de clases OO con patrones GoF A2-A3 y arquitectura A4` |
-| `2026-11-27` (Día 2) | *(Pendiente mañana: A5, A6, A7 y ajuste de cohesión tras lista B7)* |
+| `2026-11-26` (Día 1) | `feat(g2-p1): definir plataforma A1, diagrama de clases OO con patrones GoF A2-A3 y arquitectura A4` ([`e7e9c43`](https://github.com/darkid8/ADSO-3413974/commit/e7e9c43)) |
+| `2026-11-27` (Día 2) | `feat(g2-p1): agregar vistas A5 componentes, A6 despliegue, matriz A7 y mejorar cohesion en A2` ([`b660e8f`](https://github.com/darkid8/ADSO-3413974/commit/b660e8f)) |
 
 ## 6. Uso de inteligencia artificial (declaración obligatoria)
 
 | Herramienta | Para qué la usé | Qué verifiqué o cambié después |
 |---|---|---|
-| Asistente IA (Antigravity) | Apoyo en redacción técnica de justificaciones de plataforma/patrones y generación XML `.drawio` / `.svg`. | Validé que los 14 RF y 5 RNF correspondan exactamente al SRS de SIGMAVITAL y comprobé multiplicidades, composición/agregación y ausencia de saltos de capa. |
+| Asistente IA (Antigravity) | Apoyo en redacción técnica de justificaciones de plataforma/patrones, vistas y generación XML `.drawio` / `.svg`. | Validé que los 14 RF y 5 RNF correspondan exactamente al SRS de SIGMAVITAL, comprobé multiplicidades/cohesión (`GeneradorReporteOperativo`) y verifiqué dirección de dependencias en componentes. |
 
 ## 7. Enlaces
 
 - Informe de análisis / SRS del caso: `02-training-project/01-phase/01-analysis/02-requirements/04-evidence-learning/SRS_SIGMAVITAL_SGA.md`
 - Carpeta de esta entrega en GitHub: `https://github.com/darkid8/ADSO-3413974/tree/main/02-training-project/01-phase/02-planning/06-architecture/04-evidence-learning/G2-P1-sigmavital`
-- Enlaces internos: [A1](./A1-ficha-interpretacion-y-plataforma.md) · [A2-A3 Clases](./A2-A3-clases-y-patrones.md) · [A4 Arquitectura](./A4-arquitectura-decisiones.md)
+- Enlaces internos: [A1](./A1-ficha-interpretacion-y-plataforma.md) · [A2-A3 Clases](./A2-A3-clases-y-patrones.md) · [A4 Arquitectura](./A4-arquitectura-decisiones.md) · [A5 Componentes](./A5-vista-componentes.md) · [A6 Despliegue](./A6-vista-despliegue.md) · [A7 Trazabilidad](./A7-matriz-trazabilidad.md)
 
 ## 8. Declaración de autoría
 
 Declaro que los artefactos de esta carpeta son de mi autoría, que lo que reutilicé de mi trabajo del año o de otras fuentes está indicado en la sección 3, que no entregué como propio material del instructor ni de otros aprendices, y que puedo explicar cada artefacto en la verificación oral.
 
-Usuario de GitHub: `@darkid8` · Fecha: `2026-11-26`
+Usuario de GitHub: `@darkid8` · Fecha: `2026-11-27`
