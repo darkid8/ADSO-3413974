@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+    </marker>
+    <marker id="openArrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11" fill="none" stroke="#334155" stroke-width="1.5" />
+    </marker>
+    <marker id="inherit" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 1 1 L 13 7 L 1 13 z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5" />
+    </marker>
+    <marker id="comp" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#1e293b" stroke="#1e293b" stroke-width="1" />
+    </marker>
+    <marker id="aggr" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#ffffff" stroke="#1e293b" stroke-width="1.4" />
+    </marker>
+  </defs>
+  <rect width="1100" height="760" fill="#f8fafc" />
+  <rect x="12" y="12" width="1076" height="736" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="550" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">SIGMAVITAL (SGA) — Arquitectura en 4 Capas y Eventos en Tiempo Real</text>
+  <rect x="120" y="70" width="680" height="95" rx="10" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2" />
+  <text x="460" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Capa 1 · Presentación (SPA Web Responsiva)</text>
+  <text x="460" y="120" text-anchor="middle" font-size="12" fill="#1e293b">React 18 + Vite + TypeScript (Desktop / Tableta)</text>
+  <text x="460" y="142" text-anchor="middle" font-size="12" fill="#334155">Vistas por rol: Coordinador, Paramédico, Administrador</text>
+  <rect x="120" y="210" width="680" height="95" rx="10" fill="#ecfdf5" stroke="#047857" stroke-width="2" />
+  <text x="460" y="236" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Capa 2 · Controladores, Seguridad API y Tiempo Real</text>
+  <text x="460" y="260" text-anchor="middle" font-size="12" fill="#1e293b">API REST Express + Controladores HTTP | Middleware JWT + RBAC + Validación OWASP</text>
+  <text x="460" y="282" text-anchor="middle" font-size="12" fill="#334155">Gateway WebSockets (Socket.IO) bajo HTTPS/WSS (TLS 1.3)</text>
+  <rect x="120" y="360" width="680" height="95" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2" />
+  <text x="460" y="386" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Capa 3 · Lógica de Negocio y Patrones</text>
+  <text x="460" y="410" text-anchor="middle" font-size="12" fill="#1e293b">ServicioDespacho (Strategy TAB/TAM) | ServicioFlotaREPS | ServicioAtencionAPH</text>
+  <text x="460" y="432" text-anchor="middle" font-size="12" fill="#334155">Publicador de Eventos (Observer: MonitorTiempoReal + AuditoriaInmutable)</text>
+  <rect x="120" y="510" width="680" height="95" rx="10" fill="#f5f3ff" stroke="#6d28d9" stroke-width="2" />
+  <text x="460" y="536" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Capa 4 · Persistencia y Datos Relacionales</text>
+  <text x="460" y="560" text-anchor="middle" font-size="12" fill="#1e293b">Repositorios desacoplados + Pool de conexiones pg (consultas parametrizadas)</text>
+  <text x="460" y="582" text-anchor="middle" font-size="12" fill="#334155">PostgreSQL 16 (Tablas núcleo + Log de auditoría append-only)</text>
+  <rect x="860" y="370" width="190" height="75" rx="8" fill="#f1f5f9" stroke="#475569" stroke-width="1.6" />
+  <text x="955" y="400" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Servicio Externo SMTP</text>
+  <text x="955" y="422" text-anchor="middle" font-size="11" fill="#334155">Alertas y recuperación</text>
+  <line x1="460" y1="165" x2="460" y2="210" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="474" y="191.5" font-size="11" font-weight="600" fill="#0f172a">HTTPS / JSON + WSS (puerto 443)</text>
+  <line x1="460" y1="305" x2="460" y2="360" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="474" y="336.5" font-size="11" font-weight="600" fill="#0f172a">Invocación de servicios de dominio (DTOs)</text>
+  <line x1="460" y1="455" x2="460" y2="510" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="474" y="486.5" font-size="11" font-weight="600" fill="#0f172a">Interfaces de repositorio / SQL TCP 5432</text>
+  <line x1="800" y1="408" x2="860" y2="408" stroke="#475569" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arrow)" />
+  <text x="830" y="398" text-anchor="middle" font-size="10" fill="#334155">TLS 587</text>
+  <rect x="120" y="645" width="930" height="48" rx="8" fill="#f8fafc" stroke="#cbd5e1" />
+  <text x="585" y="674" text-anchor="middle" font-size="12" fill="#334155">Regla estricta sin saltos de capa: Presentación → Controladores/Seguridad → Lógica de Negocio → Persistencia (PostgreSQL).</text>
+
+</svg>
