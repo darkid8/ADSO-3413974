@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="760" viewBox="0 0 1220 760" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+    </marker>
+    <marker id="openArrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11" fill="none" stroke="#334155" stroke-width="1.5" />
+    </marker>
+    <marker id="inherit" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 1 1 L 13 7 L 1 13 z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5" />
+    </marker>
+    <marker id="comp" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#1e293b" stroke="#1e293b" stroke-width="1" />
+    </marker>
+    <marker id="aggr" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#ffffff" stroke="#1e293b" stroke-width="1.4" />
+    </marker>
+  </defs>
+  <rect width="1220" height="760" fill="#f8fafc" />
+  <rect x="12" y="12" width="1196" height="736" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="610" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">SIGMAVITAL (SGA) — B1 Modelo Conceptual de Datos (Notación Pata de Gallo)</text>
+  <rect x="50" y="80" width="195" height="104" rx="4" fill="#ffffff" stroke="#15803d" stroke-width="1.6" />
+  <rect x="50" y="80" width="195" height="28" rx="4" fill="#f0fdf4" stroke="#15803d" stroke-width="1.6" />
+  <text x="147.5" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">ROL</text>
+  <text x="58" y="123" font-size="11" fill="#1e293b">PK id_rol</text>
+  <text x="58" y="139" font-size="11" fill="#1e293b">nombre_rol</text>
+  <text x="58" y="155" font-size="11" fill="#1e293b">descripcion</text>
+  <text x="58" y="171" font-size="11" fill="#1e293b">activo</text>
+  <rect x="320" y="80" width="215" height="120" rx="4" fill="#ffffff" stroke="#15803d" stroke-width="1.6" />
+  <rect x="320" y="80" width="215" height="28" rx="4" fill="#f0fdf4" stroke="#15803d" stroke-width="1.6" />
+  <text x="427.5" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">USUARIO</text>
+  <text x="328" y="123" font-size="11" fill="#1e293b">PK id_usuario</text>
+  <text x="328" y="139" font-size="11" fill="#1e293b">nombre_completo</text>
+  <text x="328" y="155" font-size="11" fill="#1e293b">correo</text>
+  <text x="328" y="171" font-size="11" fill="#1e293b">password_hash</text>
+  <text x="328" y="187" font-size="11" fill="#1e293b">intentos_fallidos</text>
+  <rect x="620" y="80" width="225" height="120" rx="4" fill="#ffffff" stroke="#15803d" stroke-width="1.6" />
+  <rect x="620" y="80" width="225" height="28" rx="4" fill="#f0fdf4" stroke="#15803d" stroke-width="1.6" />
+  <text x="732.5" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">PERSONAL</text>
+  <text x="628" y="123" font-size="11" fill="#1e293b">PK id_personal</text>
+  <text x="628" y="139" font-size="11" fill="#1e293b">tipo_cargo</text>
+  <text x="628" y="155" font-size="11" fill="#1e293b">tarjeta_profesional</text>
+  <text x="628" y="171" font-size="11" fill="#1e293b">vigencia_certificado</text>
+  <text x="628" y="187" font-size="11" fill="#1e293b">estado_disponibilidad</text>
+  <rect x="50" y="310" width="205" height="120" rx="4" fill="#ffffff" stroke="#15803d" stroke-width="1.6" />
+  <rect x="50" y="310" width="205" height="28" rx="4" fill="#f0fdf4" stroke="#15803d" stroke-width="1.6" />
+  <text x="152.5" y="329" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">PACIENTE</text>
+  <text x="58" y="353" font-size="11" fill="#1e293b">PK id_paciente</text>
+  <text x="58" y="369" font-size="11" fill="#1e293b">tipo_documento</text>
+  <text x="58" y="385" font-size="11" fill="#1e293b">num_documento</text>
+  <text x="58" y="401" font-size="11" fill="#1e293b">nombre_completo</text>
+  <text x="58" y="417" font-size="11" fill="#1e293b">telefonos (multivaluado)</text>
+  <rect x="320" y="310" width="230" height="120" rx="4" fill="#ffffff" stroke="#15803d" stroke-width="1.6" />
+  <rect x="320" y="310" width="230" height="28" rx="4" fill="#f0fdf4" stroke="#15803d" stroke-width="1.6" />
+  <text x="435" y="329" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">SOLICITUD_EMERGENCIA</text>
+  <text x="328" y="353" font-size="11" fill="#1e293b">PK id_solicitud</text>
+  <text x="328" y="369" font-size="11" fill="#1e293b">fecha_hora</text>
+  <text x="328" y="385" font-size="11" fill="#1e293b">direccion_evento</text>
+  <text x="328" y="401" font-size="11" fill="#1e293b">tipo_emergencia</text>
+  <text x="328" y="417" font-size="11" fill="#1e293b">prioridad_clinica</text>
+  <rect x="620" y="310" width="230" height="120" rx="4" fill="#ffffff" stroke="#15803d" stroke-width="1.6" />
+  <rect x="620" y="310" width="230" height="28" rx="4" fill="#f0fdf4" stroke="#15803d" stroke-width="1.6" />
+  <text x="735" y="329" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">SERVICIO</text>
+  <text x="628" y="353" font-size="11" fill="#1e293b">PK id_servicio</text>
+  <text x="628" y="369" font-size="11" fill="#1e293b">estado_servicio</text>
+  <text x="628" y="385" font-size="11" fill="#1e293b">asignacion_manual</text>
+  <text x="628" y="401" font-size="11" fill="#1e293b">hora_asignacion</text>
+  <text x="628" y="417" font-size="11" fill="#1e293b">resultado_atencion</text>
+  <rect x="920" y="310" width="225" height="120" rx="4" fill="#ffffff" stroke="#15803d" stroke-width="1.6" />
+  <rect x="920" y="310" width="225" height="28" rx="4" fill="#f0fdf4" stroke="#15803d" stroke-width="1.6" />
+  <text x="1032.5" y="329" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">AMBULANCIA</text>
+  <text x="928" y="353" font-size="11" fill="#1e293b">PK id_ambulancia</text>
+  <text x="928" y="369" font-size="11" fill="#1e293b">numero_unidad</text>
+  <text x="928" y="385" font-size="11" fill="#1e293b">placa</text>
+  <text x="928" y="401" font-size="11" fill="#1e293b">tipo_unidad (TAB/TAM)</text>
+  <text x="928" y="417" font-size="11" fill="#1e293b">estado_operativo</text>
+  <rect x="920" y="80" width="205" height="104" rx="4" fill="#ffffff" stroke="#15803d" stroke-width="1.6" />
+  <rect x="920" y="80" width="205" height="28" rx="4" fill="#f0fdf4" stroke="#15803d" stroke-width="1.6" />
+  <text x="1022.5" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">SEDE</text>
+  <text x="928" y="123" font-size="11" fill="#1e293b">PK id_sede</text>
+  <text x="928" y="139" font-size="11" fill="#1e293b">nombre_sede</text>
+  <text x="928" y="155" font-size="11" fill="#1e293b">ciudad</text>
+  <text x="928" y="171" font-size="11" fill="#1e293b">direccion</text>
+  <rect x="920" y="540" width="230" height="104" rx="4" fill="#ffffff" stroke="#0369a1" stroke-width="1.6" />
+  <rect x="920" y="540" width="230" height="28" rx="4" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.6" />
+  <text x="1035" y="559" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">DOCUMENTO_AMBULANCIA</text>
+  <text x="928" y="583" font-size="11" fill="#1e293b">PK id_documento</text>
+  <text x="928" y="599" font-size="11" fill="#1e293b">tipo_documento</text>
+  <text x="928" y="615" font-size="11" fill="#1e293b">numero_registro</text>
+  <text x="928" y="631" font-size="11" fill="#1e293b">fecha_vencimiento</text>
+  <line x1="245" y1="132" x2="320" y2="140" stroke="#334155" stroke-width="1.5"    />
+  <text x="255.5" y="128.12" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(1,1)</text>
+  <text x="309.5" y="133.88" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(0,N)</text>
+  <rect x="259.3" y="120" width="46.400000000000006" height="13" fill="#ffffff" opacity="0.9" />
+  <text x="282.5" y="130" text-anchor="middle" font-size="10" fill="#334155">asigna</text>
+  <line x1="535" y1="140" x2="620" y2="140" stroke="#334155" stroke-width="1.5"    />
+  <text x="546.9" y="135" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(1,1)</text>
+  <text x="608.1" y="135" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(0,1)</text>
+  <rect x="551.1" y="124" width="52.800000000000004" height="13" fill="#ffffff" opacity="0.9" />
+  <text x="577.5" y="134" text-anchor="middle" font-size="10" fill="#334155">vincula</text>
+  <line x1="732.5" y1="200" x2="735" y2="310" stroke="#334155" stroke-width="1.5"    />
+  <text x="732.85" y="210.4" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(1,N)</text>
+  <text x="734.65" y="289.6" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(0,N)</text>
+  <rect x="688.15" y="239" width="91.2" height="13" fill="#ffffff" opacity="0.9" />
+  <text x="733.75" y="249" text-anchor="middle" font-size="10" fill="#334155">atiende (N:M)</text>
+  <line x1="255" y1="370" x2="320" y2="370" stroke="#334155" stroke-width="1.5"    />
+  <text x="264.1" y="365" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(1,1)</text>
+  <text x="310.9" y="365" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(1,N)</text>
+  <rect x="261.1" y="354" width="52.800000000000004" height="13" fill="#ffffff" opacity="0.9" />
+  <text x="287.5" y="364" text-anchor="middle" font-size="10" fill="#334155">origina</text>
+  <line x1="550" y1="370" x2="620" y2="370" stroke="#334155" stroke-width="1.5"    />
+  <text x="559.8" y="365" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(1,1)</text>
+  <text x="610.2" y="365" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(1,1)</text>
+  <rect x="545.8" y="354" width="78.4" height="13" fill="#ffffff" opacity="0.9" />
+  <text x="585" y="364" text-anchor="middle" font-size="10" fill="#334155">desencadena</text>
+  <line x1="920" y1="370" x2="850" y2="370" stroke="#334155" stroke-width="1.5"    />
+  <text x="910.2" y="365" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(1,1)</text>
+  <text x="859.8" y="365" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(0,N)</text>
+  <rect x="858.6" y="354" width="52.800000000000004" height="13" fill="#ffffff" opacity="0.9" />
+  <text x="885" y="364" text-anchor="middle" font-size="10" fill="#334155">ejecuta</text>
+  <line x1="1022.5" y1="184" x2="1032.5" y2="310" stroke="#334155" stroke-width="1.5"    />
+  <text x="1023.9" y="196.64" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(1,1)</text>
+  <text x="1031.1" y="287.36" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(0,N)</text>
+  <rect x="1007.5" y="231" width="40" height="13" fill="#ffffff" opacity="0.9" />
+  <text x="1027.5" y="241" text-anchor="middle" font-size="10" fill="#334155">aloja</text>
+  <line x1="1032.5" y1="430" x2="1035" y2="540" stroke="#334155" stroke-width="1.5"    />
+  <text x="1032.85" y="440.4" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(1,1)</text>
+  <text x="1034.65" y="519.6" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">(1,N)</text>
+  <rect x="1004.15" y="469" width="59.2" height="13" fill="#ffffff" opacity="0.9" />
+  <text x="1033.75" y="479" text-anchor="middle" font-size="10" fill="#334155">acredita</text>
+  <rect x="40" y="706" width="1140" height="32" rx="6" fill="#f1f5f9" stroke="#cbd5e1" />
+  <text x="610" y="726" text-anchor="middle" font-size="11" fill="#334155">9 entidades de negocio con PK, atributos, verbo y cardinalidad (mín,máx) · Incluye relación N:M (PERSONAL ↔ SERVICIO) y atributo multivaluado (telefonos).</text>
+
+</svg>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="880" viewBox="0 0 1220 880" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+    </marker>
+    <marker id="openArrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11" fill="none" stroke="#334155" stroke-width="1.5" />
+    </marker>
+    <marker id="inherit" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 1 1 L 13 7 L 1 13 z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5" />
+    </marker>
+    <marker id="comp" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#1e293b" stroke="#1e293b" stroke-width="1" />
+    </marker>
+    <marker id="aggr" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#ffffff" stroke="#1e293b" stroke-width="1.4" />
+    </marker>
+  </defs>
+  <rect width="1220" height="880" fill="#f8fafc" />
+  <rect x="12" y="12" width="1196" height="856" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="610" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">SIGMAVITAL (SGA) — B2 Modelo Lógico Relacional en 3FN (12 Tablas)</text>
+  <rect x="40" y="70" width="220" height="104" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
+  <rect x="40" y="70" width="220" height="28" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="150" y="89" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">rol</text>
+  <text x="48" y="113" font-size="11" fill="#1e293b">PK id_rol: INTEGER</text>
+  <text x="48" y="129" font-size="11" fill="#1e293b">nombre_rol: VARCHAR(50) UQ</text>
+  <text x="48" y="145" font-size="11" fill="#1e293b">descripcion: VARCHAR(200)</text>
+  <text x="48" y="161" font-size="11" fill="#1e293b">activo: BOOLEAN</text>
+  <rect x="310" y="70" width="250" height="136" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
+  <rect x="310" y="70" width="250" height="28" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="435" y="89" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">usuario</text>
+  <text x="318" y="113" font-size="11" fill="#1e293b">PK id_usuario: INTEGER</text>
+  <text x="318" y="129" font-size="11" fill="#1e293b">FK id_rol: INTEGER</text>
+  <text x="318" y="145" font-size="11" fill="#1e293b">nombre_completo: VARCHAR(150)</text>
+  <text x="318" y="161" font-size="11" fill="#1e293b">correo: VARCHAR(180) UQ</text>
+  <text x="318" y="177" font-size="11" fill="#1e293b">password_hash: VARCHAR(255)</text>
+  <text x="318" y="193" font-size="11" fill="#1e293b">intentos_fallidos: INTEGER</text>
+  <rect x="610" y="70" width="250" height="136" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
+  <rect x="610" y="70" width="250" height="28" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="735" y="89" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">personal</text>
+  <text x="618" y="113" font-size="11" fill="#1e293b">PK id_personal: INTEGER</text>
+  <text x="618" y="129" font-size="11" fill="#1e293b">FK id_usuario: INTEGER UQ</text>
+  <text x="618" y="145" font-size="11" fill="#1e293b">tipo_cargo: VARCHAR(20)</text>
+  <text x="618" y="161" font-size="11" fill="#1e293b">tarjeta_profesional: VARCHAR(40)</text>
+  <text x="618" y="177" font-size="11" fill="#1e293b">vigencia_certificado: DATE</text>
+  <text x="618" y="193" font-size="11" fill="#1e293b">disponible: BOOLEAN</text>
+  <rect x="610" y="270" width="250" height="104" rx="4" fill="#ffffff" stroke="#b45309" stroke-width="1.6" />
+  <rect x="610" y="270" width="250" height="28" rx="4" fill="#fef3c7" stroke="#b45309" stroke-width="1.6" />
+  <text x="735" y="289" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">tripulacion_servicio</text>
+  <text x="618" y="313" font-size="11" fill="#1e293b">PK,FK id_servicio: INTEGER</text>
+  <text x="618" y="329" font-size="11" fill="#1e293b">PK,FK id_personal: INTEGER</text>
+  <text x="618" y="345" font-size="11" fill="#1e293b">rol_operativo: VARCHAR(30)</text>
+  <text x="618" y="361" font-size="11" fill="#1e293b">hora_asignacion: TIMESTAMP</text>
+  <rect x="310" y="270" width="240" height="136" rx="4" fill="#ffffff" stroke="#6d28d9" stroke-width="1.6" />
+  <rect x="310" y="270" width="240" height="28" rx="4" fill="#f5f3ff" stroke="#6d28d9" stroke-width="1.6" />
+  <text x="430" y="289" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">auditoria_evento</text>
+  <text x="318" y="313" font-size="11" fill="#1e293b">PK id_auditoria: INTEGER</text>
+  <text x="318" y="329" font-size="11" fill="#1e293b">FK id_usuario: INTEGER</text>
+  <text x="318" y="345" font-size="11" fill="#1e293b">modulo: VARCHAR(50)</text>
+  <text x="318" y="361" font-size="11" fill="#1e293b">accion: VARCHAR(30)</text>
+  <text x="318" y="377" font-size="11" fill="#1e293b">entidad_afectada: VARCHAR(60)</text>
+  <text x="318" y="393" font-size="11" fill="#1e293b">fecha_hora: TIMESTAMP</text>
+  <rect x="40" y="480" width="220" height="120" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
+  <rect x="40" y="480" width="220" height="28" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="150" y="499" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">paciente</text>
+  <text x="48" y="523" font-size="11" fill="#1e293b">PK id_paciente: INTEGER</text>
+  <text x="48" y="539" font-size="11" fill="#1e293b">tipo_documento: VARCHAR(10)</text>
+  <text x="48" y="555" font-size="11" fill="#1e293b">num_documento: VARCHAR(25) UQ</text>
+  <text x="48" y="571" font-size="11" fill="#1e293b">nombre_completo: VARCHAR(150)</text>
+  <text x="48" y="587" font-size="11" fill="#1e293b">antecedentes: TEXT</text>
+  <rect x="40" y="670" width="220" height="104" rx="4" fill="#ffffff" stroke="#047857" stroke-width="1.6" />
+  <rect x="40" y="670" width="220" height="28" rx="4" fill="#ecfdf5" stroke="#047857" stroke-width="1.6" />
+  <text x="150" y="689" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">telefono_paciente</text>
+  <text x="48" y="713" font-size="11" fill="#1e293b">PK id_telefono: INTEGER</text>
+  <text x="48" y="729" font-size="11" fill="#1e293b">FK id_paciente: INTEGER</text>
+  <text x="48" y="745" font-size="11" fill="#1e293b">numero_telefono: VARCHAR(20)</text>
+  <text x="48" y="761" font-size="11" fill="#1e293b">etiqueta: VARCHAR(20)</text>
+  <rect x="310" y="480" width="250" height="120" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
+  <rect x="310" y="480" width="250" height="28" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="435" y="499" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">solicitud_emergencia</text>
+  <text x="318" y="523" font-size="11" fill="#1e293b">PK id_solicitud: INTEGER</text>
+  <text x="318" y="539" font-size="11" fill="#1e293b">FK id_paciente: INTEGER</text>
+  <text x="318" y="555" font-size="11" fill="#1e293b">fecha_solicitud: TIMESTAMP</text>
+  <text x="318" y="571" font-size="11" fill="#1e293b">direccion_evento: VARCHAR(200)</text>
+  <text x="318" y="587" font-size="11" fill="#1e293b">prioridad_clinica: VARCHAR(15)</text>
+  <rect x="610" y="480" width="250" height="136" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
+  <rect x="610" y="480" width="250" height="28" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="735" y="499" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">servicio</text>
+  <text x="618" y="523" font-size="11" fill="#1e293b">PK id_servicio: INTEGER</text>
+  <text x="618" y="539" font-size="11" fill="#1e293b">FK id_solicitud: INTEGER UQ</text>
+  <text x="618" y="555" font-size="11" fill="#1e293b">FK id_ambulancia: INTEGER</text>
+  <text x="618" y="571" font-size="11" fill="#1e293b">estado_servicio: VARCHAR(20)</text>
+  <text x="618" y="587" font-size="11" fill="#1e293b">asignacion_manual: BOOLEAN</text>
+  <text x="618" y="603" font-size="11" fill="#1e293b">destino_traslado: VARCHAR(150)</text>
+  <rect x="920" y="480" width="245" height="136" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
+  <rect x="920" y="480" width="245" height="28" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="1042.5" y="499" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">ambulancia</text>
+  <text x="928" y="523" font-size="11" fill="#1e293b">PK id_ambulancia: INTEGER</text>
+  <text x="928" y="539" font-size="11" fill="#1e293b">FK id_sede: INTEGER</text>
+  <text x="928" y="555" font-size="11" fill="#1e293b">numero_unidad: VARCHAR(20) UQ</text>
+  <text x="928" y="571" font-size="11" fill="#1e293b">placa: VARCHAR(10) UQ</text>
+  <text x="928" y="587" font-size="11" fill="#1e293b">tipo_unidad: VARCHAR(3)</text>
+  <text x="928" y="603" font-size="11" fill="#1e293b">estado_operativo: VARCHAR(25)</text>
+  <rect x="920" y="70" width="230" height="104" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
+  <rect x="920" y="70" width="230" height="28" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="1035" y="89" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">sede</text>
+  <text x="928" y="113" font-size="11" fill="#1e293b">PK id_sede: INTEGER</text>
+  <text x="928" y="129" font-size="11" fill="#1e293b">nombre_sede: VARCHAR(100) UQ</text>
+  <text x="928" y="145" font-size="11" fill="#1e293b">ciudad: VARCHAR(80)</text>
+  <text x="928" y="161" font-size="11" fill="#1e293b">direccion: VARCHAR(180)</text>
+  <rect x="920" y="680" width="245" height="120" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
+  <rect x="920" y="680" width="245" height="28" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="1042.5" y="699" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">documento_ambulancia</text>
+  <text x="928" y="723" font-size="11" fill="#1e293b">PK id_documento: INTEGER</text>
+  <text x="928" y="739" font-size="11" fill="#1e293b">FK id_ambulancia: INTEGER</text>
+  <text x="928" y="755" font-size="11" fill="#1e293b">tipo_documento: VARCHAR(30)</text>
+  <text x="928" y="771" font-size="11" fill="#1e293b">numero_registro: VARCHAR(50)</text>
+  <text x="928" y="787" font-size="11" fill="#1e293b">fecha_vencimiento: DATE</text>
+  <line x1="260" y1="122" x2="310" y2="138" stroke="#334155" stroke-width="1.5"    />
+  <text x="267" y="119.24" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
+  <text x="303" y="130.76" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">0..*</text>
+  <line x1="560" y1="138" x2="610" y2="138" stroke="#334155" stroke-width="1.5"    />
+  <text x="567" y="133" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
+  <text x="603" y="133" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">0..1</text>
+  <line x1="435" y1="206" x2="430" y2="270" stroke="#334155" stroke-width="1.5"    />
+  <text x="434.3" y="209.96" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">0..1</text>
+  <text x="430.7" y="256.04" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">0..*</text>
+  <line x1="735" y1="206" x2="735" y2="270" stroke="#334155" stroke-width="1.5"    />
+  <text x="735" y="209.96" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
+  <text x="735" y="256.04" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">0..*</text>
+  <line x1="735" y1="480" x2="735" y2="374" stroke="#334155" stroke-width="1.5"    />
+  <text x="735" y="460.16" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
+  <text x="735" y="383.84000000000003" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1..*</text>
+  <line x1="150" y1="600" x2="150" y2="670" stroke="#334155" stroke-width="1.5"    />
+  <text x="150" y="604.8" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
+  <text x="150" y="655.2" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1..*</text>
+  <line x1="260" y1="540" x2="310" y2="540" stroke="#334155" stroke-width="1.5"    />
+  <text x="267" y="535" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
+  <text x="303" y="535" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1..*</text>
+  <line x1="560" y1="540" x2="610" y2="548" stroke="#334155" stroke-width="1.5"    />
+  <text x="567" y="536.12" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
+  <text x="603" y="541.88" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
+  <line x1="920" y1="548" x2="860" y2="548" stroke="#334155" stroke-width="1.5"    />
+  <text x="911.6" y="543" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
+  <text x="868.4" y="543" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">0..*</text>
+  <line x1="1035" y1="174" x2="1042.5" y2="480" stroke="#334155" stroke-width="1.5"    />
+  <text x="1036.05" y="211.84" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
+  <text x="1041.45" y="432.15999999999997" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">0..*</text>
+  <line x1="1042.5" y1="616" x2="1042.5" y2="680" stroke="#334155" stroke-width="1.5"    />
+  <text x="1042.5" y="619.96" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
+  <text x="1042.5" y="666.04" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1..*</text>
+  <rect x="40" y="826" width="1140" height="32" rx="6" fill="#f1f5f9" stroke="#cbd5e1" />
+  <text x="610" y="846" text-anchor="middle" font-size="11" fill="#334155">12 tablas normalizadas en 3FN · PK, FK, UNIQUE (UQ), tabla intermedia N:M (tripulacion_servicio) y tabla multivaluada (telefono_paciente).</text>
+
+</svg>
