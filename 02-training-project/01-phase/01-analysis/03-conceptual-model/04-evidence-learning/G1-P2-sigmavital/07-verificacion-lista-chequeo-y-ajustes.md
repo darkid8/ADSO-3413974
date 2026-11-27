@@ -1,0 +1,42 @@
+# Lista de Chequeo de Validación y Registro de Ajustes — SIGMAVITAL (SGA)
+
+**Autor:** `@darkid8`  
+**Formatos:** Anexo B y Anexo D de `Plantilla_README_Entrega_G1.md`  
+**Alcance:** Verificación cruzada sobre todos los artefactos de `G1-P1-sigmavital` y `G1-P2-sigmavital`.
+
+---
+
+## 1. Anexo B · Lista de chequeo diligenciada (`16 criterios verificables`, 5 de cobertura/trazabilidad)
+
+| # | Criterio verificable (Sí / No) | Artefacto | ¿Cumple (v1)? | Evidencia (enlace o cita) | Hallazgo / Resultado (v2 final) |
+|---|---|---|---|---|---|
+| 1 | *(Cobertura)* Al menos el 90 % de los requisitos funcionales del SRS aparece cubierto en casos de uso y los no cubiertos están justificados | `G1-P1/02-matriz-requisitos-casos-uso.md` | **Sí** | 60/65 RF cubiertos (92,31 %); `RF-031`–`RF-035` justificados por SRS §1.6. | Cumple (`Sí`). |
+| 2 | *(Trazabilidad)* Cada caso de uso crítico posee diagrama de actividades, plantilla extendida y pantalla rotulada | `G1-P2` (`01`, `02-03`, `06`) | **Sí** | `CU-05`, `CU-06`, `CU-07` cubiertos en plantillas, actividades (`CU-06`, `CU-07`) y `PANT-01`–`PANT-03`. | Cumple (`Sí`). |
+| 3 | *(Trazabilidad)* Todo concepto utilizado en las plantillas extendidas existe en el modelo de dominio | `01-plantillas`, `04-modelo-dominio` | **Sí** | `Paciente`, `SolicitudEmergencia`, `ServicioAtencion`, `Ambulancia`, `DocumentoHabilitacion`, `PersonalOperativo`, `NovedadOperativa`. | Cumple (`Sí`). |
+| 4 | *(Trazabilidad)* Cada rama de decisión y flujo alterno/excepción del diagrama de actividades aparece en la plantilla extendida del mismo caso | `02-actividad-*`, `01-plantillas` | **Sí** | Guardas de `CU-06` y `CU-07` coinciden 1-a-1 con pasos, alternos y excepciones. | Cumple (`Sí`). |
+| 5 | *(Cobertura)* Todo requisito funcional cubierto llega trazado hasta clase de dominio y entidad del MER | `08-informe-analisis-y-trazabilidad.md` (Anexo C) | **Sí** | Matriz Anexo C enlaza los 60 RF cubiertos (92,31 %) hasta clase y entidad. | Cumple (`Sí`). |
+| 6 | El diagrama de casos de uso define frontera, ≥ 2 actores primarios, ≥ 8 casos (`Verbo + objeto`) y relaciones `«include»`/`«extend»` justificadas | `G1-P1/03-diagrama-casos-uso.*`, `03-justificacion-casos-uso.md` | **Sí** | Frontera `SIGMAVITAL`, 5 primarios + 1 secundario, 16 casos, 4 `include` y 2 `extend` con `PE-01`/`PE-02`. | Cumple (`Sí`). |
+| 7 | Las plantillas extendidas redactan su flujo principal como intención pura de negocio sin detalles técnicos de implementación | `01-plantillas-casos-uso-extendidos.md` | **No** *(v1)* | En v1 `CU-06` paso 5 citaba `tabla servicios` y `WebSocket` (`Rubricas_G1.md` §7.10). | **Hallazgo H-01 corregido** → `Sí` en v2. |
+| 8 | Las precondiciones de cada plantilla contienen únicamente lo asumido cierto antes de iniciar y no validaciones ejecutadas dentro del flujo | `01-plantillas-casos-uso-extendidos.md` | **No** *(v1)* | En v1 `CU-06` incluía «existen ambulancias en estado Disponible en la base de datos» (`Rubricas_G1.md` §7.3). | **Hallazgo H-02 corregido** → `Sí` en v2. |
+| 9 | Cada plantilla extendida cuenta con ≥ 6 pasos en flujo principal, ≥ 1 flujo alterno y ≥ 1 excepción | `01-plantillas-casos-uso-extendidos.md` | **Sí** | `CU-05` (8 pasos), `CU-06` (6 pasos, 2 alternos, 2 excepciones), `CU-07` (7 pasos, 2 alternos, 2 excepciones). | Cumple (`Sí`). |
+| 10 | Los diagramas de actividades poseen calles por actor, inicio, fin, guardas entre corchetes en todas las salidas y bifurcación/unión o justificación | `02-actividad-despacho.svg`, `03-actividad-atencion-cierre.svg` | **Sí** | `CU-06` tiene 3 calles y fork/join; `CU-07` tiene 2 calles y justificación secuencial en `02-03-diagramas-actividades.md`. | Cumple (`Sí`). |
+| 11 | El modelo de dominio contiene ≥ 8 clases conceptuales, ≥ 5 con ≥ 2 atributos, sin métodos y sin atributos técnicos tipo llave foránea | `04-modelo-dominio.*` | **No** *(v1)* | En v1 `Ambulancia` contenía `idSede: Referencia` y multiplicidad `?` hacia `NovedadOperativa` (`Rubricas_G1.md` §7.5). | **Hallazgo H-03 corregido** → `Sí` en v2. |
+| 12 | El modelo de dominio incluye al menos una generalización o clase de asociación con multiplicidades completas | `04-modelo-dominio.*` | **Sí** | Generalización `PersonalOperativo` ← `Paramedico`/`Conductor` y clase de asociación `AsignacionTripulacion`. | Cumple (`Sí`). |
+| 13 | El MER declara notación, contiene ≥ 6 entidades con PK, y toda relación N:M está resuelta con entidad asociativa que posee atributos propios | `05-mer-conceptual.*` | **No** *(v1)* | En v1 `TRIPULACION_SERVICIO` tenía solo `rol_operativo` y faltaba atributo temporal de incorporación. | **Hallazgo H-04 corregido** → `Sí` en v2. |
+| 14 | El MER representa al menos una entidad débil o relación recursiva coherente con los requisitos de trazabilidad del SRS | `05-mer-conceptual.*` | **No** *(v1)* | En v1 faltaba la entidad débil `HISTORIAL_ESTADO_SERVICIO` exigida por `RF-024` y `RNF-028`. | **Hallazgo H-05 corregido** → `Sí` en v2. |
+| 15 | Toda pantalla del prototipo inicial está rotulada explícitamente con el identificador y nombre del caso de uso que atiende | `06-mockup-cu05-*.svg`, `cu06-*.svg`, `cu07-*.svg` | **Sí** | `PANT-01` → `CU-05`, `PANT-02` → `CU-06`, `PANT-03` → `CU-07` visibles en cabecera y pie. | Cumple (`Sí`). |
+| 16 | El informe de análisis consolida requisitos interpretados, enlaces a todos los modelos, verificación y matriz de trazabilidad | `08-informe-analisis-y-trazabilidad.md` | **Sí** | Incluye las 4 secciones exigidas y Anexo C. | Cumple (`Sí`). |
+
+---
+
+## 2. Anexo D · Registro de ajustes y segunda verificación (`5 hallazgos corregidos`)
+
+Todos los hallazgos detectados en la evaluación inicial (`11/16` en v1) fueron corregidos en el commit [`60fbf20`](https://github.com/darkid8/ADSO-3413974/commit/60fbf20) y verificados nuevamente alcanzando **16/16 criterios cumplidos (`100 %`)**:
+
+| # | Hallazgo (criterio incumplido) | Artefacto | Antes (v1) | Después (v2) | Enlace al commit | ¿Se verificó de nuevo? |
+|---|---|---|---|---|---|---|
+| `H-01` | Criterio #7 (Detalles de implementación en análisis) | `01-plantillas-casos-uso-extendidos.md` (`CU-06`) | Paso 5 decía: *«crea el servicio vinculado en la tabla `servicios`... y emite la notificación por `WebSocket`»*. | Paso 5 reescrito como intención pura: *«registra la asignación del servicio en estado `Asignado`, actualiza el estado de la ambulancia a `En servicio` y notifica en tiempo real al tablero operativo y a la tripulación asignada»*. | [`60fbf20`](https://github.com/darkid8/ADSO-3413974/commit/60fbf20) | **Sí** (`100 %` sin términos técnicos) |
+| `H-02` | Criterio #8 (Precondición vs validación dentro del flujo) | `01-plantillas-casos-uso-extendidos.md` (`CU-06`) | Precondición asumía: *«existen ambulancias en estado `Disponible` en la base de datos»*. | Precondición corregida a: *«El Coordinador Operativo inició sesión con rol autorizado y existe al menos una solicitud en estado `Solicitado`»*; la falta de unidades queda en excepción `2a`. | [`60fbf20`](https://github.com/darkid8/ADSO-3413974/commit/60fbf20) | **Sí** (acorde a §7.3) |
+| `H-03` | Criterio #11 (Atributo técnico FK y multiplicidad incompleta en Dominio) | `04-modelo-dominio.drawio` / `.svg` / `.md` | `Ambulancia` contenía el atributo técnico `idSede: Referencia` y la asociación hacia `NovedadOperativa` mostraba multiplicidad `?`. | Se eliminó `idSede` de `Ambulancia` (la relación se expresa por asociación con `SedeOperativa`) y se fijó multiplicidad `1` a `0..*` hacia `NovedadOperativa`. | [`60fbf20`](https://github.com/darkid8/ADSO-3413974/commit/60fbf20) | **Sí** (XML validado y revisado) |
+| `H-04` | Criterio #13 (Completitud de entidad asociativa N:M en MER) | `05-mer-conceptual.drawio` / `.svg` / `.md` | `TRIPULACION_SERVICIO` registraba únicamente `rol_operativo`. | Se incorporó el atributo propio `hora_incorporacion` en `TRIPULACION_SERVICIO` para auditar el instante exacto de asignación del tripulante. | [`60fbf20`](https://github.com/darkid8/ADSO-3413974/commit/60fbf20) | **Sí** |
+| `H-05` | Criterio #14 (Cobertura de trazabilidad de estados REPS en MER) | `05-mer-conceptual.drawio` / `.svg` / `.md` | Faltaba entidad débil para registrar cada transición histórica exigida por `RF-024` y `RNF-028`. | Se añadió la entidad débil `HISTORIAL_ESTADO_SERVICIO` (`id_historial PK`, `id_servicio FK`, `estado_anterior`, `estado_nuevo`, `fecha_cambio`) ligada `(1,1)-(1,N)` a `SERVICIO` (11 entidades). | [`60fbf20`](https://github.com/darkid8/ADSO-3413974/commit/60fbf20) | **Sí** |
