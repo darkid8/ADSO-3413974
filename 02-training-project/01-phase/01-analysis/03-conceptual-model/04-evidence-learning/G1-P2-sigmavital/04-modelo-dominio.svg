@@ -19,7 +19,7 @@
   </defs>
   <rect width="1340" height="820" fill="#f8fafc" />
   <rect x="12" y="12" width="1316" height="796" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
-  <text x="670" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">SIGMAVITAL (SGA) — Modelo de Dominio Conceptual (v1)</text>
+  <text x="670" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">SIGMAVITAL (SGA) — Modelo de Dominio Conceptual (v2 verificado)</text>
   <rect x="60" y="80" width="230" height="88" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
   <rect x="60" y="80" width="230" height="28" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
   <text x="175" y="99" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Paciente</text>
@@ -46,14 +46,13 @@
   <text x="1058" y="123" font-size="11" fill="#1e293b">tipoNovedad: Texto</text>
   <text x="1058" y="139" font-size="11" fill="#1e293b">prioridad: Texto</text>
   <text x="1058" y="155" font-size="11" fill="#1e293b">estadoSeguimiento: Texto</text>
-  <rect x="710" y="310" width="250" height="120" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
+  <rect x="710" y="310" width="250" height="104" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
   <rect x="710" y="310" width="250" height="28" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
   <text x="835" y="329" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Ambulancia</text>
   <text x="718" y="353" font-size="11" fill="#1e293b">numeroUnidad: Texto</text>
   <text x="718" y="369" font-size="11" fill="#1e293b">placa: Texto</text>
   <text x="718" y="385" font-size="11" fill="#1e293b">tipoUnidad: TAB|TAM</text>
   <text x="718" y="401" font-size="11" fill="#1e293b">estadoOperativo: Texto</text>
-  <text x="718" y="417" font-size="11" fill="#1e293b">idSede: Referencia</text>
   <rect x="1050" y="310" width="230" height="88" rx="4" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6" />
   <rect x="1050" y="310" width="230" height="28" rx="4" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
   <text x="1165" y="329" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">DocumentoHabilitacion</text>
@@ -91,48 +90,48 @@
   <line x1="290" y1="124" x2="370" y2="132" stroke="#334155" stroke-width="1.5"    />
   <text x="301.2" y="120.12" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
   <text x="358.8" y="125.88" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1..*</text>
-  <rect x="303.6" y="112" width="52.800000000000004" height="13" fill="#ffffff" opacity="0.9" />
+  <rect x="303.6" y="112" width="52.800000000000004" height="13" fill="#ffffff" opacity="0.92" />
   <text x="330" y="122" text-anchor="middle" font-size="10" fill="#334155">origina</text>
   <line x1="620" y1="132" x2="710" y2="132" stroke="#334155" stroke-width="1.5"    />
   <text x="632.6" y="127" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
   <text x="697.4" y="127" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
-  <rect x="641.8" y="116" width="46.400000000000006" height="13" fill="#ffffff" opacity="0.9" />
+  <rect x="641.8" y="116" width="46.400000000000006" height="13" fill="#ffffff" opacity="0.92" />
   <text x="665" y="126" text-anchor="middle" font-size="10" fill="#334155">genera</text>
   <line x1="960" y1="132" x2="1050" y2="124" stroke="#334155" stroke-width="1.5"    />
   <text x="972.6" y="125.88" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
-  <text x="1037.4" y="120.12" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">?</text>
-  <rect x="975.4" y="112" width="59.2" height="13" fill="#ffffff" opacity="0.9" />
+  <text x="1037.4" y="120.12" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">0..*</text>
+  <rect x="975.4" y="112" width="59.2" height="13" fill="#ffffff" opacity="0.92" />
   <text x="1005" y="122" text-anchor="middle" font-size="10" fill="#334155">registra</text>
   <line x1="835" y1="184" x2="835" y2="310" stroke="#334155" stroke-width="1.5"    />
   <text x="835" y="196.64" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">0..*</text>
   <text x="835" y="287.36" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
-  <rect x="792.6" y="231" width="84.80000000000001" height="13" fill="#ffffff" opacity="0.9" />
+  <rect x="792.6" y="231" width="84.80000000000001" height="13" fill="#ffffff" opacity="0.92" />
   <text x="835" y="241" text-anchor="middle" font-size="10" fill="#334155">atendido por</text>
-  <line x1="960" y1="370" x2="1050" y2="354" stroke="#334155" stroke-width="1.5"    />
-  <text x="972.6" y="362.76" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
-  <text x="1037.4" y="351.24" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1..*</text>
-  <rect x="956.2" y="346" width="97.60000000000001" height="13" fill="#ffffff" opacity="0.9" />
-  <text x="1005" y="356" text-anchor="middle" font-size="10" fill="#334155">respaldada por</text>
-  <line x1="1050" y1="544" x2="960" y2="370" stroke="#334155" stroke-width="1.5"    />
-  <text x="1037.4" y="514.64" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
-  <text x="972.6" y="389.36" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">0..*</text>
-  <rect x="985" y="441" width="40" height="13" fill="#ffffff" opacity="0.9" />
-  <text x="1005" y="451" text-anchor="middle" font-size="10" fill="#334155">aloja</text>
+  <line x1="960" y1="362" x2="1050" y2="354" stroke="#334155" stroke-width="1.5"    />
+  <text x="972.6" y="355.88" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
+  <text x="1037.4" y="350.12" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1..*</text>
+  <rect x="956.2" y="342" width="97.60000000000001" height="13" fill="#ffffff" opacity="0.92" />
+  <text x="1005" y="352" text-anchor="middle" font-size="10" fill="#334155">respaldada por</text>
+  <line x1="1050" y1="544" x2="960" y2="362" stroke="#334155" stroke-width="1.5"    />
+  <text x="1037.4" y="513.52" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1</text>
+  <text x="972.6" y="382.48" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">0..*</text>
+  <rect x="985" y="437" width="40" height="13" fill="#ffffff" opacity="0.92" />
+  <text x="1005" y="447" text-anchor="middle" font-size="10" fill="#334155">aloja</text>
   <line x1="835" y1="184" x2="490" y2="470" stroke="#334155" stroke-width="1.5"    />
   <text x="786.7" y="219.04000000000002" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">0..*</text>
   <text x="538.3" y="424.96000000000004" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">1..*</text>
-  <rect x="623.3" y="311" width="78.4" height="13" fill="#ffffff" opacity="0.9" />
+  <rect x="623.3" y="311" width="78.4" height="13" fill="#ffffff" opacity="0.92" />
   <text x="662.5" y="321" text-anchor="middle" font-size="10" fill="#334155">tripulación</text>
   <line x1="485" y1="374" x2="490" y2="470" stroke="#334155" stroke-width="1.5" stroke-dasharray="5,4"  marker-end="url(#openArrow)" />
-  <rect x="435.5" y="406" width="104" height="13" fill="#ffffff" opacity="0.9" />
+  <rect x="435.5" y="406" width="104" height="13" fill="#ffffff" opacity="0.92" />
   <text x="487.5" y="416" text-anchor="middle" font-size="10" fill="#334155">detalla vínculo</text>
   <line x1="430" y1="686" x2="370" y2="514" stroke="#334155" stroke-width="1.5"   marker-end="url(#inherit)" />
-  <rect x="380" y="584" width="40" height="13" fill="#ffffff" opacity="0.9" />
+  <rect x="380" y="584" width="40" height="13" fill="#ffffff" opacity="0.92" />
   <text x="400" y="594" text-anchor="middle" font-size="10" fill="#334155">es un</text>
   <line x1="635" y1="650" x2="490" y2="558" stroke="#334155" stroke-width="1.5"   marker-end="url(#inherit)" />
-  <rect x="542.5" y="588" width="40" height="13" fill="#ffffff" opacity="0.9" />
+  <rect x="542.5" y="588" width="40" height="13" fill="#ffffff" opacity="0.92" />
   <text x="562.5" y="598" text-anchor="middle" font-size="10" fill="#334155">es un</text>
   <rect x="40" y="766" width="1260" height="32" rx="6" fill="#f1f5f9" stroke="#cbd5e1" />
-  <text x="670" y="786" text-anchor="middle" font-size="11" fill="#334155">Modelo de Dominio (sin métodos): 11 clases conceptuales, generalización (PersonalOperativo) y clase de asociación (AsignacionTripulacion).</text>
+  <text x="670" y="786" text-anchor="middle" font-size="11" fill="#334155">Modelo de Dominio puro (sin métodos ni claves foráneas): 11 clases, generalización (PersonalOperativo) y clase de asociación (AsignacionTripulacion).</text>
 
 </svg>

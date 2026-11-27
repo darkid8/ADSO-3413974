@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-27T08:05:00.000Z" agent="SIGMAVITAL-Generator" version="24.0.0" type="device">
+  <diagram id="SIGMAVITAL-SGA-Diagrama-de-Actividades-UML-CU-06-Despachar-Ambulancia" name="SIGMAVITAL (SGA) — Diagrama de Actividades UML · CU-06 Despachar Ambulancia">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1220" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="SIGMAVITAL (SGA) — Diagrama de Actividades UML · CU-06 Despachar Ambulancia" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontStyle=1;fontSize=15;" vertex="1" parent="1"><mxGeometry x="80" y="14" width="1060" height="28" as="geometry"/></mxCell>
+        <mxCell id="ln_coord" value="Coordinador Operativo" style="swimlane;whiteSpace=wrap;html=1;startSize=28;fillColor=#f8fafc;strokeColor=#475569;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="30" y="55" width="380" height="960" as="geometry"/></mxCell>
+        <mxCell id="ln_sis" value="Sistema SIGMAVITAL" style="swimlane;whiteSpace=wrap;html=1;startSize=28;fillColor=#ffffff;strokeColor=#475569;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="410" y="55" width="460" height="960" as="geometry"/></mxCell>
+        <mxCell id="ln_par" value="Paramédico" style="swimlane;whiteSpace=wrap;html=1;startSize=28;fillColor=#f8fafc;strokeColor=#475569;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="870" y="55" width="320" height="960" as="geometry"/></mxCell>
+        <mxCell id="st" value="" style="ellipse;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="1"><mxGeometry x="206" y="102" width="28" height="28" as="geometry"/></mxCell>
+        <mxCell id="a1" value="Seleccionar solicitud
+Solicitado y pulsar Despachar" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#eff6ff;strokeColor=#1d4ed8;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1"><mxGeometry x="105" y="155" width="230" height="48" as="geometry"/></mxCell>
+        <mxCell id="a2" value="Validar habilitación vigente
+REPS/SOAT y tripulación (CU-13)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#eff6ff;strokeColor=#1d4ed8;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1"><mxGeometry x="520" y="155" width="240" height="48" as="geometry"/></mxCell>
+        <mxCell id="d1" value="¿Habilitación
+vigente?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#b45309;fontSize=10;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="575" y="232" width="130" height="72" as="geometry"/></mxCell>
+        <mxCell id="a_err" value="Bloquear despacho y
+alertar (estado Solicitado)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#fef2f2;strokeColor=#dc2626;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1"><mxGeometry x="520" y="345" width="240" height="46" as="geometry"/></mxCell>
+        <mxCell id="end1" value="" style="ellipse;html=1;shape=endState;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="1"><mxGeometry x="800" y="352" width="32" height="32" as="geometry"/></mxCell>
+        <mxCell id="a3" value="Evaluar prioridad, TAB/TAM
+y sugerir unidad (≤ 2 s)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#eff6ff;strokeColor=#1d4ed8;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1"><mxGeometry x="520" y="425" width="240" height="48" as="geometry"/></mxCell>
+        <mxCell id="d2" value="¿Acepta
+sugerencia?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#b45309;fontSize=10;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="155" y="415" width="130" height="70" as="geometry"/></mxCell>
+        <mxCell id="a_man" value="Elegir unidad manual y
+registrar motivo (RN-007)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#fff7ed;strokeColor=#c2410c;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1"><mxGeometry x="100" y="525" width="240" height="48" as="geometry"/></mxCell>
+        <mxCell id="d3" value="¿TAB/TAM acorde
+a prioridad?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#b45309;fontSize=10;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="575" y="515" width="130" height="70" as="geometry"/></mxCell>
+        <mxCell id="a_adv" value="Mostrar advertencia RN-002
+y solicitar confirmación" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#fff7ed;strokeColor=#c2410c;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1"><mxGeometry x="100" y="615" width="240" height="46" as="geometry"/></mxCell>
+        <mxCell id="a4" value="Crear servicio Asignado,
+ocupar unidad y auditar (CU-14)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#eff6ff;strokeColor=#1d4ed8;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1"><mxGeometry x="520" y="620" width="245" height="48" as="geometry"/></mxCell>
+        <mxCell id="fk" value="" style="shape=line;html=1;strokeWidth=5;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="1"><mxGeometry x="540" y="702" width="200" height="10" as="geometry"/></mxCell>
+        <mxCell id="p1" value="Actualizar tablero operativo
+en tiempo real" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ecfdf5;strokeColor=#047857;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1"><mxGeometry x="440" y="745" width="210" height="48" as="geometry"/></mxCell>
+        <mxCell id="p2" value="Notificar servicio asignado
+a la tripulación en campo" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ecfdf5;strokeColor=#047857;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1"><mxGeometry x="665" y="745" width="200" height="48" as="geometry"/></mxCell>
+        <mxCell id="jn" value="" style="shape=line;html=1;strokeWidth=5;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="1"><mxGeometry x="540" y="830" width="200" height="10" as="geometry"/></mxCell>
+        <mxCell id="a5" value="Recibir alerta de despacho
+y confirmar lectura en móvil" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#eff6ff;strokeColor=#1d4ed8;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1"><mxGeometry x="915" y="810" width="230" height="50" as="geometry"/></mxCell>
+        <mxCell id="end2" value="" style="ellipse;html=1;shape=endState;fillColor=#0f172a;strokeColor=#0f172a;" vertex="1" parent="1"><mxGeometry x="1014" y="905" width="32" height="32" as="geometry"/></mxCell>
+        <mxCell id="af_1" value="" style="endArrow=classic;html=1;strokeColor=#334155;fontSize=10;fontStyle=1;" edge="1" parent="1" source="st" target="a1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_2" value="" style="endArrow=classic;html=1;strokeColor=#334155;fontSize=10;fontStyle=1;" edge="1" parent="1" source="a1" target="a2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_3" value="" style="endArrow=classic;html=1;strokeColor=#334155;fontSize=10;fontStyle=1;" edge="1" parent="1" source="a2" target="d1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_4" value="[Sin unidades habilitadas]" style="endArrow=classic;html=1;strokeColor=#dc2626;fontSize=10;fontStyle=1;" edge="1" parent="1" source="d1" target="a_err"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_5" value="" style="endArrow=classic;html=1;strokeColor=#dc2626;fontSize=10;fontStyle=1;" edge="1" parent="1" source="a_err" target="end1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_6" value="[Unidades y tripulación habilitadas]" style="endArrow=classic;html=1;strokeColor=#047857;fontSize=10;fontStyle=1;" edge="1" parent="1" source="d1" target="a3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_7" value="" style="endArrow=classic;html=1;strokeColor=#334155;fontSize=10;fontStyle=1;" edge="1" parent="1" source="a3" target="d2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_8" value="[Asignación manual con motivo RN-007]" style="endArrow=classic;html=1;strokeColor=#c2410c;fontSize=10;fontStyle=1;" edge="1" parent="1" source="d2" target="a_man"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_9" value="[Sugerencia automática aceptada]" style="endArrow=classic;html=1;strokeColor=#047857;fontSize=10;fontStyle=1;" edge="1" parent="1" source="d2" target="d3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_10" value="" style="endArrow=classic;html=1;strokeColor=#334155;fontSize=10;fontStyle=1;" edge="1" parent="1" source="a_man" target="d3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_11" value="[Requiere confirmación advertencia RN-002]" style="endArrow=classic;html=1;strokeColor=#c2410c;fontSize=10;fontStyle=1;" edge="1" parent="1" source="d3" target="a_adv"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_12" value="[Confirmado]" style="endArrow=classic;html=1;strokeColor=#334155;fontSize=10;fontStyle=1;" edge="1" parent="1" source="a_adv" target="a4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_13" value="[Tipo TAB/TAM acorde a prioridad]" style="endArrow=classic;html=1;strokeColor=#047857;fontSize=10;fontStyle=1;" edge="1" parent="1" source="d3" target="a4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_14" value="" style="endArrow=classic;html=1;strokeColor=#334155;fontSize=10;fontStyle=1;" edge="1" parent="1" source="a4" target="fk"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_15" value="" style="endArrow=classic;html=1;strokeColor=#334155;fontSize=10;fontStyle=1;" edge="1" parent="1" source="fk" target="p1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_16" value="" style="endArrow=classic;html=1;strokeColor=#334155;fontSize=10;fontStyle=1;" edge="1" parent="1" source="fk" target="p2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_17" value="" style="endArrow=classic;html=1;strokeColor=#334155;fontSize=10;fontStyle=1;" edge="1" parent="1" source="p1" target="jn"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_18" value="" style="endArrow=classic;html=1;strokeColor=#334155;fontSize=10;fontStyle=1;" edge="1" parent="1" source="p2" target="jn"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_19" value="" style="endArrow=classic;html=1;strokeColor=#334155;fontSize=10;fontStyle=1;" edge="1" parent="1" source="jn" target="a5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="af_20" value="" style="endArrow=classic;html=1;strokeColor=#334155;fontSize=10;fontStyle=1;" edge="1" parent="1" source="a5" target="end2"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

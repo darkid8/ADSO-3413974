@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="620" viewBox="0 0 980 620" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+    </marker>
+    <marker id="openArrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11" fill="none" stroke="#334155" stroke-width="1.5" />
+    </marker>
+    <marker id="inherit" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 1 1 L 13 7 L 1 13 z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5" />
+    </marker>
+    <marker id="comp" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#1e293b" stroke="#1e293b" stroke-width="1" />
+    </marker>
+    <marker id="aggr" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#ffffff" stroke="#1e293b" stroke-width="1.4" />
+    </marker>
+  </defs>
+  <rect width="980" height="620" fill="#f8fafc" />
+  <rect x="12" y="12" width="956" height="596" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="490" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Prototipo Inicial — PANT-03 · CU-07 · Gestionar atención prehospitalaria y cierre de servicio</text>
+
+  <!-- Frame Navegador -->
+  <rect x="40" y="62" width="900" height="520" rx="10" fill="#ffffff" stroke="#334155" stroke-width="2" />
+  <rect x="40" y="62" width="900" height="38" rx="10" fill="#0f172a" />
+  <circle cx="65" cy="81" r="6" fill="#ef4444" />
+  <circle cx="85" cy="81" r="6" fill="#f59e0b" />
+  <circle cx="105" cy="81" r="6" fill="#22c55e" />
+  <text x="135" y="86" font-size="13" font-weight="700" fill="#ffffff">SIGMAVITAL · SGA | PANT-03 · CU-07 · Gestionar atención prehospitalaria y cierre de servicio</text>
+  <!-- Sidebar RBAC -->
+  <rect x="40" y="100" width="190" height="482" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+  <text x="58" y="128" font-size="11" font-weight="700" fill="#475569">MENÚ POR ROL (RBAC)</text>
+  <rect x="52" y="146" width="166" height="30" rx="6" fill="#ffffff" stroke="#cbd5e1" />
+  <text x="64" y="165" font-size="11" font-weight="500" fill="#1e293b">Solicitudes (CU-05)</text>
+  <rect x="52" y="184" width="166" height="30" rx="6" fill="#ffffff" stroke="#cbd5e1" />
+  <text x="64" y="203" font-size="11" font-weight="500" fill="#1e293b">Despacho TAB/TAM (CU-06)</text>
+  <rect x="52" y="222" width="166" height="30" rx="6" fill="#1d4ed8" stroke="#1d4ed8" />
+  <text x="64" y="241" font-size="11" font-weight="700" fill="#ffffff">Atención APH (CU-07)</text>
+  <rect x="52" y="260" width="166" height="30" rx="6" fill="#ffffff" stroke="#cbd5e1" />
+  <text x="64" y="279" font-size="11" font-weight="500" fill="#1e293b">Flota y REPS (CU-03)</text>
+  <rect x="52" y="298" width="166" height="30" rx="6" fill="#ffffff" stroke="#cbd5e1" />
+  <text x="64" y="317" font-size="11" font-weight="500" fill="#1e293b">Auditoría (CU-10)</text>
+  <!-- Contenido -->
+  <text x="255" y="132" font-size="16" font-weight="700" fill="#0f172a">Bitácora de Atención APH y Cierre Formal (Servicio #SRV-089)</text>
+  <!-- Stepper máquina de estados -->
+  <rect x="255" y="148" width="665" height="62" rx="8" fill="#f8fafc" stroke="#cbd5e1" />
+  <rect x="270" y="164" width="116" height="28" rx="14" fill="#047857" />
+  <text x="328" y="182" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">Asignado</text>
+  <rect x="398" y="164" width="116" height="28" rx="14" fill="#047857" />
+  <text x="456" y="182" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">En ruta</text>
+  <rect x="526" y="164" width="116" height="28" rx="14" fill="#047857" />
+  <text x="584" y="182" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">En atención</text>
+  <rect x="654" y="164" width="116" height="28" rx="14" fill="#047857" />
+  <text x="712" y="182" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">Traslado</text>
+  <rect x="782" y="164" width="116" height="28" rx="14" fill="#e2e8f0" />
+  <text x="840" y="182" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">Finalizado</text>
+  <rect x="255" y="226" width="665" height="215" rx="8" fill="#f8fafc" stroke="#cbd5e1" />
+  <text x="272" y="250" font-size="12" font-weight="700" fill="#1e293b">Campos Obligatorios de Cierre (RN-005)</text>
+  <rect x="272" y="264" width="630" height="44" rx="4" fill="#ffffff" stroke="#94a3b8" /><text x="282" y="290" font-size="11" fill="#475569">1. Resultado de la atención: [Estabilización y traslado asistido...]</text>
+  <rect x="272" y="320" width="305" height="34" rx="4" fill="#ffffff" stroke="#94a3b8" /><text x="282" y="341" font-size="11" fill="#475569">2. Estado final paciente: [Estable / Crítico]</text>
+  <rect x="595" y="320" width="307" height="34" rx="4" fill="#ffffff" stroke="#94a3b8" /><text x="605" y="341" font-size="11" fill="#475569">3. Destino traslado: [Hospital Universitario]</text>
+  <rect x="272" y="366" width="630" height="34" rx="4" fill="#ffffff" stroke="#94a3b8" /><text x="282" y="387" font-size="11" fill="#475569">4. Responsable del cierre: [Paramédico Líder TAM-04]</text>
+  <rect x="255" y="458" width="230" height="38" rx="6" fill="#047857" /><text x="370" y="482" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">Cerrar Servicio (Finalizado)</text>
+  <rect x="502" y="458" width="230" height="38" rx="6" fill="#c2410c" /><text x="617" y="482" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">Reportar Novedad en Ruta (CU-16)</text>
+  <rect x="245" y="540" width="680" height="28" rx="5" fill="#eff6ff" stroke="#93c5fd" />
+  <text x="585" y="558" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a8a">Rótulo de trazabilidad: PANT-03 · CU-07 · Gestionar atención prehospitalaria y cierre de servicio</text>
+
+</svg>

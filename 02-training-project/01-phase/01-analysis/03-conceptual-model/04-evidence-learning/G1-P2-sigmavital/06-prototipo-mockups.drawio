@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-27T08:05:00.000Z" agent="SIGMAVITAL-Generator" version="24.0.0" type="device">
+  <diagram id="page-1" name="PANT-01 CU-05 Solicitud">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="960" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bg" value="PANT-01 · CU-05 · Registrar solicitud de emergencia y paciente" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=13;fillColor=#f8fafc;strokeColor=#1e40af;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="40" y="30" width="880" height="480" as="geometry"/></mxCell>
+        <mxCell id="sb" value="MENÚ RBAC&#xa;Solicitudes (CU-05)&#xa;Despacho (CU-06)&#xa;Atención APH (CU-07)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#e2e8f0;strokeColor=#64748b;fontSize=11;" vertex="1" parent="1"><mxGeometry x="40" y="65" width="180" height="445" as="geometry"/></mxCell>
+        <mxCell id="fld_0" value="Datos del Paciente (Documento, Nombre, Teléfono, Antecedentes)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;fontSize=11;" vertex="1" parent="1"><mxGeometry x="240" y="85" width="650" height="120" as="geometry"/></mxCell>
+        <mxCell id="fld_1" value="Datos del Evento (Dirección, Tipo de emergencia, Prioridad ROJO/AMARILLO/VERDE)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;fontSize=11;" vertex="1" parent="1"><mxGeometry x="240" y="225" width="650" height="140" as="geometry"/></mxCell>
+        <mxCell id="fld_2" value="Registrar Solicitud" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#1d4ed8;fontSize=11;" vertex="1" parent="1"><mxGeometry x="240" y="390" width="200" height="40" as="geometry"/></mxCell>
+        <mxCell id="fld_3" value="Registrar y Despachar (CU-06)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#15803d;fontSize=11;" vertex="1" parent="1"><mxGeometry x="460" y="390" width="230" height="40" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-2" name="PANT-02 CU-06 Despacho">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="960" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bg" value="PANT-02 · CU-06 · Despachar ambulancia a servicio de emergencia" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=13;fillColor=#f8fafc;strokeColor=#1e40af;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="40" y="30" width="880" height="480" as="geometry"/></mxCell>
+        <mxCell id="sb" value="MENÚ RBAC&#xa;Solicitudes (CU-05)&#xa;Despacho (CU-06)&#xa;Atención APH (CU-07)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#e2e8f0;strokeColor=#64748b;fontSize=11;" vertex="1" parent="1"><mxGeometry x="40" y="65" width="180" height="445" as="geometry"/></mxCell>
+        <mxCell id="fld_0" value="Solicitud #SOL-104 · Prioridad ROJO · Sugerencia automática TAM-04" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=11;" vertex="1" parent="1"><mxGeometry x="240" y="85" width="650" height="80" as="geometry"/></mxCell>
+        <mxCell id="fld_1" value="TAM-04 (Rojo TAM) · Disponible · REPS/SOAT OK" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;fontSize=11;" vertex="1" parent="1"><mxGeometry x="240" y="185" width="315" height="140" as="geometry"/></mxCell>
+        <mxCell id="fld_2" value="TAB-02 (Verde TAB) · Alternativa manual RN-002" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;fontSize=11;" vertex="1" parent="1"><mxGeometry x="575" y="185" width="315" height="140" as="geometry"/></mxCell>
+        <mxCell id="fld_3" value="Motivo de Asignación Manual / Cancelación (RN-007 / RN-006)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;fontSize=11;" vertex="1" parent="1"><mxGeometry x="240" y="345" width="650" height="70" as="geometry"/></mxCell>
+        <mxCell id="fld_4" value="Confirmar Despacho" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#1d4ed8;fontSize=11;" vertex="1" parent="1"><mxGeometry x="240" y="435" width="200" height="40" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-3" name="PANT-03 CU-07 Cierre">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="960" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bg" value="PANT-03 · CU-07 · Gestionar atención prehospitalaria y cierre de servicio" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=13;fillColor=#f8fafc;strokeColor=#1e40af;strokeWidth=2;" vertex="1" parent="1"><mxGeometry x="40" y="30" width="880" height="480" as="geometry"/></mxCell>
+        <mxCell id="sb" value="MENÚ RBAC&#xa;Solicitudes (CU-05)&#xa;Despacho (CU-06)&#xa;Atención APH (CU-07)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#e2e8f0;strokeColor=#64748b;fontSize=11;" vertex="1" parent="1"><mxGeometry x="40" y="65" width="180" height="445" as="geometry"/></mxCell>
+        <mxCell id="fld_0" value="Estados: Asignado -&gt; En ruta -&gt; En atención -&gt; Traslado -&gt; Finalizado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecfdf5;strokeColor=#047857;fontSize=11;" vertex="1" parent="1"><mxGeometry x="240" y="85" width="650" height="60" as="geometry"/></mxCell>
+        <mxCell id="fld_1" value="1. Resultado atención | 2. Estado paciente | 3. Destino traslado | 4. Responsable (RN-005)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;fontSize=11;" vertex="1" parent="1"><mxGeometry x="240" y="165" width="650" height="200" as="geometry"/></mxCell>
+        <mxCell id="fld_2" value="Cerrar Servicio (Finalizado)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#047857;fontSize=11;" vertex="1" parent="1"><mxGeometry x="240" y="390" width="220" height="40" as="geometry"/></mxCell>
+        <mxCell id="fld_3" value="Reportar Novedad en Ruta (CU-16)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffedd5;strokeColor=#c2410c;fontSize=11;" vertex="1" parent="1"><mxGeometry x="480" y="390" width="240" height="40" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

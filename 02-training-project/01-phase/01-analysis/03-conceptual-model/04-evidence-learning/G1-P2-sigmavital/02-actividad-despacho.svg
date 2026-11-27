@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="1080" viewBox="0 0 1220 1080" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155" />
+    </marker>
+    <marker id="openArrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 1 L 11 6 L 1 11" fill="none" stroke="#334155" stroke-width="1.5" />
+    </marker>
+    <marker id="inherit" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 1 1 L 13 7 L 1 13 z" fill="#ffffff" stroke="#1e293b" stroke-width="1.5" />
+    </marker>
+    <marker id="comp" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#1e293b" stroke="#1e293b" stroke-width="1" />
+    </marker>
+    <marker id="aggr" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="14" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 z" fill="#ffffff" stroke="#1e293b" stroke-width="1.4" />
+    </marker>
+  </defs>
+  <rect width="1220" height="1080" fill="#f8fafc" />
+  <rect x="12" y="12" width="1196" height="1056" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="610" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">SIGMAVITAL (SGA) — Diagrama de Actividades UML · CU-06 Despachar Ambulancia</text>
+  <rect x="30" y="55" width="380" height="960" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" />
+  <rect x="30" y="55" width="380" height="30" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5" />
+  <text x="220" y="75" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Coordinador Operativo</text>
+  <rect x="410" y="55" width="460" height="960" fill="#ffffff" stroke="#64748b" stroke-width="1.5" />
+  <rect x="410" y="55" width="460" height="30" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5" />
+  <text x="640" y="75" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Sistema SIGMAVITAL</text>
+  <rect x="870" y="55" width="320" height="960" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" />
+  <rect x="870" y="55" width="320" height="30" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5" />
+  <text x="1030" y="75" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Paramédico</text>
+  <circle cx="220" cy="116" r="13" fill="#0f172a" />
+  <rect x="105" y="155" width="230" height="48" rx="12" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="220" y="176" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">Seleccionar solicitud</text>
+  <text x="220" y="190" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">Solicitado y pulsar Despachar</text>
+  <rect x="520" y="155" width="240" height="48" rx="12" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="640" y="176" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">Validar habilitación vigente</text>
+  <text x="640" y="190" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">REPS/SOAT y tripulación (CU-13)</text>
+  <polygon points="640,232 705,268 640,304 575,268" fill="#fef3c7" stroke="#b45309" stroke-width="1.6" />
+  <text x="640" y="265" text-anchor="middle" font-size="10" font-weight="700" fill="#78350f">¿Habilitación</text>
+  <text x="640" y="277" text-anchor="middle" font-size="10" font-weight="700" fill="#78350f">vigente?</text>
+  <rect x="520" y="345" width="240" height="46" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6" />
+  <text x="640" y="365" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">Bloquear despacho y</text>
+  <text x="640" y="379" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">alertar (estado Solicitado)</text>
+  <circle cx="816" cy="368" r="15" fill="#ffffff" stroke="#0f172a" stroke-width="2.5" />
+  <circle cx="816" cy="368" r="9" fill="#0f172a" />
+  <rect x="520" y="425" width="240" height="48" rx="12" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="640" y="446" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">Evaluar prioridad, TAB/TAM</text>
+  <text x="640" y="460" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">y sugerir unidad (≤ 2 s)</text>
+  <polygon points="220,415 285,450 220,485 155,450" fill="#fef3c7" stroke="#b45309" stroke-width="1.6" />
+  <text x="220" y="447" text-anchor="middle" font-size="10" font-weight="700" fill="#78350f">¿Acepta</text>
+  <text x="220" y="459" text-anchor="middle" font-size="10" font-weight="700" fill="#78350f">sugerencia?</text>
+  <rect x="100" y="525" width="240" height="48" rx="12" fill="#fff7ed" stroke="#c2410c" stroke-width="1.6" />
+  <text x="220" y="546" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">Elegir unidad manual y</text>
+  <text x="220" y="560" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">registrar motivo (RN-007)</text>
+  <polygon points="640,515 705,550 640,585 575,550" fill="#fef3c7" stroke="#b45309" stroke-width="1.6" />
+  <text x="640" y="547" text-anchor="middle" font-size="10" font-weight="700" fill="#78350f">¿TAB/TAM acorde</text>
+  <text x="640" y="559" text-anchor="middle" font-size="10" font-weight="700" fill="#78350f">a prioridad?</text>
+  <rect x="100" y="615" width="240" height="46" rx="12" fill="#fff7ed" stroke="#c2410c" stroke-width="1.6" />
+  <text x="220" y="635" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">Mostrar advertencia RN-002</text>
+  <text x="220" y="649" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">y solicitar confirmación</text>
+  <rect x="520" y="620" width="245" height="48" rx="12" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="642.5" y="641" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">Crear servicio Asignado,</text>
+  <text x="642.5" y="655" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">ocupar unidad y auditar (CU-14)</text>
+  <rect x="540" y="704" width="200" height="6" rx="2" fill="#0f172a" />
+  <text x="748" y="711" font-size="10" font-weight="600" fill="#475569">Bifurcación (Fork)</text>
+  <rect x="440" y="745" width="210" height="48" rx="12" fill="#ecfdf5" stroke="#047857" stroke-width="1.6" />
+  <text x="545" y="766" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">Actualizar tablero operativo</text>
+  <text x="545" y="780" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">en tiempo real</text>
+  <rect x="665" y="745" width="200" height="48" rx="12" fill="#ecfdf5" stroke="#047857" stroke-width="1.6" />
+  <text x="765" y="766" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">Notificar servicio asignado</text>
+  <text x="765" y="780" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">a la tripulación en campo</text>
+  <rect x="540" y="832" width="200" height="6" rx="2" fill="#0f172a" />
+  <text x="748" y="839" font-size="10" font-weight="600" fill="#475569">Unión (Join)</text>
+  <rect x="915" y="810" width="230" height="50" rx="12" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6" />
+  <text x="1030" y="832" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">Recibir alerta de despacho</text>
+  <text x="1030" y="846" text-anchor="middle" font-size="11" font-weight="500" fill="#0f172a">y confirmar lectura en móvil</text>
+  <circle cx="1030" cy="921" r="15" fill="#ffffff" stroke="#0f172a" stroke-width="2.5" />
+  <circle cx="1030" cy="921" r="9" fill="#0f172a" />
+  <path d="M 220 130 L 220 155" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow)" />
+  <path d="M 335 179 L 520 179" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow)" />
+  <path d="M 640 203 L 640 232" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow)" />
+  <path d="M 640 304 L 640 345" fill="none" stroke="#dc2626" stroke-width="1.6" marker-end="url(#arrow)" />
+  <rect x="559.6" y="315" width="160.79999999999998" height="15" rx="3" fill="#ffffff" opacity="0.92" />
+  <text x="640" y="326" text-anchor="middle" font-size="10" font-weight="700" fill="#dc2626">[Sin unidades habilitadas]</text>
+  <path d="M 760 368 L 800 368" fill="none" stroke="#dc2626" stroke-width="1.6" marker-end="url(#arrow)" />
+  <path d="M 575 268 L 485 268 L 485 449 L 520 449" fill="none" stroke="#047857" stroke-width="1.6" marker-end="url(#arrow)" />
+  <rect x="375.6" y="387" width="218.79999999999998" height="15" rx="3" fill="#ffffff" opacity="0.92" />
+  <text x="485" y="398" text-anchor="middle" font-size="10" font-weight="700" fill="#047857">[Unidades y tripulación habilitadas]</text>
+  <path d="M 520 449 L 285 450" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow)" />
+  <path d="M 220 485 L 220 525" fill="none" stroke="#c2410c" stroke-width="1.6" marker-end="url(#arrow)" />
+  <rect x="107.7" y="495" width="224.6" height="15" rx="3" fill="#ffffff" opacity="0.92" />
+  <text x="220" y="506" text-anchor="middle" font-size="10" font-weight="700" fill="#c2410c">[Asignación manual con motivo RN-007]</text>
+  <path d="M 265 465 L 390 465 L 390 535 L 585 535" fill="none" stroke="#047857" stroke-width="1.6" marker-end="url(#arrow)" />
+  <rect x="332.2" y="507" width="195.6" height="15" rx="3" fill="#ffffff" opacity="0.92" />
+  <text x="430" y="518" text-anchor="middle" font-size="10" font-weight="700" fill="#047857">[Sugerencia automática aceptada]</text>
+  <path d="M 340 550 L 575 550" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow)" />
+  <path d="M 575 562 L 340 632" fill="none" stroke="#c2410c" stroke-width="1.6" marker-end="url(#arrow)" />
+  <rect x="308.2" y="593" width="253.6" height="15" rx="3" fill="#ffffff" opacity="0.92" />
+  <text x="435" y="604" text-anchor="middle" font-size="10" font-weight="700" fill="#c2410c">[Requiere confirmación advertencia RN-002]</text>
+  <path d="M 340 644 L 520 644" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow)" />
+  <rect x="390.2" y="627" width="79.6" height="15" rx="3" fill="#ffffff" opacity="0.92" />
+  <text x="430" y="638" text-anchor="middle" font-size="10" font-weight="700" fill="#0f172a">[Confirmado]</text>
+  <path d="M 640 585 L 642.5 620" fill="none" stroke="#047857" stroke-width="1.6" marker-end="url(#arrow)" />
+  <rect x="539.3" y="591" width="201.4" height="15" rx="3" fill="#ffffff" opacity="0.92" />
+  <text x="640" y="602" text-anchor="middle" font-size="10" font-weight="700" fill="#047857">[Tipo TAB/TAM acorde a prioridad]</text>
+  <path d="M 642.5 668 L 640 702" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow)" />
+  <path d="M 580 712 L 545 745" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow)" />
+  <path d="M 700 712 L 765 745" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow)" />
+  <path d="M 545 793 L 580 830" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow)" />
+  <path d="M 765 793 L 700 830" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow)" />
+  <path d="M 740 835 L 915 835" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow)" />
+  <path d="M 1030 860 L 1030 905" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow)" />
+  <rect x="40" y="1028" width="1140" height="32" rx="6" fill="#f1f5f9" stroke="#cbd5e1" />
+  <text x="610" y="1048" text-anchor="middle" font-size="11" fill="#334155">3 calles por actor · Decisiones con guardas completas entre corchetes · Bifurcación/Unión (Fork/Join) para notificación simultánea en tiempo real.</text>
+
+</svg>
