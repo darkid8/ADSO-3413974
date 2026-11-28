@@ -41,6 +41,7 @@
 - [x] Diagrama de casos de uso (imagen): [03-diagrama-casos-uso.svg](./03-diagrama-casos-uso.svg)
 - [x] Justificación de actores y relaciones UML: [03-justificacion-casos-uso.md](./03-justificacion-casos-uso.md)
 - [x] Matriz requisito → caso de uso: [02-matriz-requisitos-casos-uso.md](./02-matriz-requisitos-casos-uso.md)
+- [x] Versión consolidada en inglés *(English version)*: [en/G1-P1-Conceptual-Model-Plan-and-Use-Cases-EN.md](./en/G1-P1-Conceptual-Model-Plan-and-Use-Cases-EN.md)
 
 ## 6. Declaración de autoría
 

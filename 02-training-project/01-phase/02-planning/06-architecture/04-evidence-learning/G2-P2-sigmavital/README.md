@@ -70,6 +70,7 @@ Elaboré el cuadro formal de reglas de transformación, las demostraciones paso 
 - Informe de análisis / SRS del caso: `02-training-project/01-phase/01-analysis/02-requirements/04-evidence-learning/SRS_SIGMAVITAL_SGA.md`
 - Carpeta de esta entrega en GitHub: `https://github.com/darkid8/ADSO-3413974/tree/main/02-training-project/01-phase/02-planning/06-architecture/04-evidence-learning/G2-P2-sigmavital`
 - Enlaces internos: [B1 Conceptual](./B1-modelo-conceptual.md) · [B2 Lógico](./B2-modelo-logico-y-reglas.md) · [B3 Normalización](./B3-normalizacion.md) · [B4 Diccionario](./B4-diccionario-datos.md) · [B5 SQL](./B5-schema-sigmavital.sql) · [B5 Evidencia](./B5-evidencia-ejecucion.md) · [B6 Seguridad](./B6-politicas-seguridad-y-roles.md) · [B7 Verificación](./B7-lista-chequeo-verificacion.md)
+- English version: [en/G2-P2-Data-Model-Security-and-Verification-EN.md](./en/G2-P2-Data-Model-Security-and-Verification-EN.md)
 
 ## 8. Declaración de autoría
 

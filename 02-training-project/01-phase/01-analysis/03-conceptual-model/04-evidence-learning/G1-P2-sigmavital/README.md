@@ -45,6 +45,7 @@
 - [x] Registro de ajustes y segunda verificación: [07-verificacion-lista-chequeo-y-ajustes.md](./07-verificacion-lista-chequeo-y-ajustes.md)
 - [x] Informe de análisis: [08-informe-analisis-y-trazabilidad.md](./08-informe-analisis-y-trazabilidad.md)
 - [x] Matriz de trazabilidad (Anexo C): [08-informe-analisis-y-trazabilidad.md](./08-informe-analisis-y-trazabilidad.md)
+- [x] Versión consolidada en inglés *(English version)*: [en/G1-P2-Analysis-Model-and-Verification-EN.md](./en/G1-P2-Analysis-Model-and-Verification-EN.md)
 
 ## 6. Declaración de autoría
 

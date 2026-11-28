@@ -70,6 +70,7 @@ Construí desde cero el diseño orientado a objetos tipado (17 clases/interfaces
 - Informe de análisis / SRS del caso: `02-training-project/01-phase/01-analysis/02-requirements/04-evidence-learning/SRS_SIGMAVITAL_SGA.md`
 - Carpeta de esta entrega en GitHub: `https://github.com/darkid8/ADSO-3413974/tree/main/02-training-project/01-phase/02-planning/06-architecture/04-evidence-learning/G2-P1-sigmavital`
 - Enlaces internos: [A1](./A1-ficha-interpretacion-y-plataforma.md) · [A2-A3 Clases](./A2-A3-clases-y-patrones.md) · [A4 Arquitectura](./A4-arquitectura-decisiones.md) · [A5 Componentes](./A5-vista-componentes.md) · [A6 Despliegue](./A6-vista-despliegue.md) · [A7 Trazabilidad](./A7-matriz-trazabilidad.md)
+- English version: [en/G2-P1-Design-Artifacts-and-Architecture-EN.md](./en/G2-P1-Design-Artifacts-and-Architecture-EN.md)
 
 ## 8. Declaración de autoría
 
